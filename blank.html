@@ -7,6 +7,16 @@
    <link rel="icon" href="img/fav/favicon.svg" type="image/svg+xml">
    <link rel="apple-touch-icon" href="img/fav/favicon180.png">
    <link rel="manifest" href="manifest.webmanifest">
+</head>
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+   <meta charset="utf-8">
+   <title>HTML Academy: Глейси</title>
+   <link rel="icon" href="favicon.ico?v=4">
+   <link rel="icon" href="img/fav/favicon.svg" type="image/svg+xml">
+   <link rel="apple-touch-icon" href="img/fav/favicon180.png">
+   <link rel="manifest" href="manifest.webmanifest">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="css/normalize.css" rel="stylesheet">
@@ -14,50 +24,56 @@
 </head>
 <body class="page-body">
 <header class="main-header">
-  <nav class="main-navigation">
-    <a class="main-header-logo" href="index.html">
-      <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
-    </a>
-    <ul class="site-navigation">
-      <li class="catalog-navigation">
-        <a href="catalog.html">Каталог</a>
-            <ul class="catalog-navigation-list">
-          <li>
-            <a href="catalog.html"><b>Новинки</b></a>
+  <div class="main-navigation" >
+    <nav class="nav-main-container">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
+      </a>
+      <ul class="site-navigation">
+        <li class="catalog-navigation">
+          <a href="catalog.html">Каталог</a>
+          <!--    <ul class="catalog-navigation-list">
+            <li>
+              <a href="catalog.html"><b>Новинки</b></a>
+            </li>
+            <li>
+              <a href="catalog.html">Сливочное</a>
           </li>
-          <li>
-            <a href="catalog.html">Сливочное</a>
+            <li>
+              <a href="catalog.html">Щербеты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Фруктовый лёд</a>
+            </li>
+            <li>
+              <a href="catalog.html">Мелорин</a>
+            </li>
+          </ul>-->
         </li>
-          <li>
-            <a href="catalog.html">Щербеты</a>
-          </li>
-          <li>
-            <a href="catalog.html">Фруктовый лёд</a>
-          </li>
-          <li>
-            <a href="catalog.html">Мелорин</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="blank.html">Доставка и оплата</a>
-      </li>
-      <li>
-        <a href="blank.html">О компании</a>
-      </li>
-    </ul>
-    <a class="modal-seach-button" href="#">
-      <img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
-    </a><br>
-    <a class="modal-login-button" href="#">
-      <img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">Вход
-    </a><br>
-    <a class="modal-basket-button" href="#">
-      <img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина">Пусто
-    </a>
-    <p>с 10 до 20, ежедневно</p>
-    <a class="phone" href="tel:+78124502525">8 812 450-25-25</a>
-  </nav>
+        <li>
+          <a href="blank.html">Доставка и оплата</a>
+        </li>
+        <li>
+          <a href="blank.html">О компании</a>
+        </li>
+      </ul>
+      <div class="nav-button-container">
+        <a class="modal-login modal-seach-button" href="#">
+          <img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
+        </a>
+        <a class="modal-login modal-login-button" href="#">
+          <img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">Вход
+        </a>
+        <a class="modal-login modal-basket-button" href="#">
+          <img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина">Пусто
+        </a>
+    </div>     
+    </nav>
+    <div class="nav-info-container" >    
+        <p class="nav-info-text">с 10 до 20, ежедневно</p>
+        <a class="nav-info-phone" href="tel:+78124502525">8 812 450-25-25</a>
+    </div> 
+  </div>
 </header>
 <main class="container"> 
 <h1>Такой страницы нет!</h1>
@@ -65,58 +81,60 @@
 <a href="catalog.html">Перейти в каталог</a>
 </main>
 <footer class="main-footer">
-    <section class="footer-social">
-    <h2>
-      Наши соцсети
-    </h2>
-    <ul>
-      <li>
-        <a class="social-button" href="#">
-          <img src="img/icons/FB.svg" width="32" height="32" alt="Фейсбук">
-          </a>
-        </li>
+  <section class="footer-social">
+      <!--<h2>
+        Наши соцсети
+      </h2>-->
+      <ul class="footer-social-list">
         <li>
           <a class="social-button" href="#">
-            <img src="img/icons/VK.svg" width="32" height="32" alt="Вконтакте">
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="#">
-            <img src="img/icons/IG.svg" width="32" height="32" alt="Инстаграм">
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="#">
-            <img src="img/icons/TW.svg" width="32" height="32" alt="Твитер">
-          </a>
-        </li>
-    </ul>
+            <img src="img/icons/FB.svg" width="32" height="32" alt="Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/icons/VK.svg" width="32" height="32" alt="Вконтакте">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/icons/IG.svg" width="32" height="32" alt="Инстаграм">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/icons/TW.svg" width="32" height="32" alt="Твитер">
+            </a>
+          </li>
+      </ul>
   </section>
-  <section class="footer-info">
-    <h2>
-      О нас
-    </h2>
-    <ul class="footer-info-list">
-      <li>
-          <a href="#"><img src="img/icons/heart_ico.png" width="15" height="13" alt="Сердечко"> Для поставщиков</a>
-        </li>
+    <section class="footer-info">
+      <!--<h2>
+        О нас
+      </h2>-->
+      <ul class="footer-info-list">
         <li>
-          <a href="#">Наши документы</a>
-        </li>
-        <li>
-          <a href="#">О производстве</a>
-        </li>
-        <li>
-          <a href="#">Экологические стандарты</a>
-        </li>
-    </ul>   
-  </section>
-    <a href="https://htmlacademy.ru">
-      <img src="img/logo/logo_academy.svg" width="108" height="39" alt="Лого_разработчика">
-    </a>
-    <p class="text-developer">
-      Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
-    </p>
+            <a href="#"><img src="img/icons/heart_ico.png" width="15" height="13" alt="Сердечко"> Для поставщиков</a>
+          </li>
+          <li>
+            <a href="#">Наши документы</a>
+          </li>
+          <li>
+            <a href="#">О производстве</a>
+          </li>
+          <li>
+            <a href="#">Экологические стандарты</a>
+          </li>
+      </ul>   
+    </section>
+    <section class="footer-info-developer">
+      <a href="https://htmlacademy.ru">
+        <img src="img/logo/logo_academy.svg" width="108" height="39" alt="Лого_разработчика">
+      </a>
+      <p class="text-developer">
+        Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
+      </p>
+    </section>  
 </footer>
 <section class="modal modal-login">
   <h2>Личный кабинет</h2>

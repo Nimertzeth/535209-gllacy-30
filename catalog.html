@@ -24,134 +24,150 @@
 </head>
 <body class="page-body">
 <header class="main-header">
-  <nav class="main-navigation">
-    <a class="main-header-logo" href="index.html">
-      <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
-    </a>
-    <ul class="site-navigation">
-      <li class="catalog-navigation catalog-navigation-catalog">
-      	<a href="catalog.html">Каталог</a>
-      	    <ul class="catalog-navigation-list">
-    			<li>
-    				<a href="catalog.html"><b>Новинки</b></a>
-    			</li>
-    			<li>
-   	 				<a href="catalog.html">Сливочное</a>
-				</li>
-    			<li>
-    				<a href="catalog.html">Щербеты</a>
-    			</li>
-    			<li>
-    				<a href="catalog.html">Фруктовый лёд</a>
-    			</li>
-    			<li>
-    				<a href="catalog.html">Мелорин</a>
-    			</li>
-  			</ul>
-      </li>
-      <li>
-      	<a href="blank.html">Доставка и оплата</a>
-      </li>
-      <li>
-      	<a href="blank.html">О компании</a>
-      </li>
-    </ul>
-    <a class="modal-seach-button" href="#">
-    	<img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
-    </a><br>
-    <a class="modal-login-button" href="#">
-    	<img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">Вход
-    </a><br>
-    <a class="modal-basket-button" href="#">
-    	<img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина">Пусто
-    </a>
-    <p>с 10 до 20, ежедневно</p>
-    <a class="phone" href="tel:+78124502525">8 812 450-25-25</a>
-  </nav>
+  <div class="main-navigation" >
+	  <nav class="nav-main-container">
+	    <a class="main-header-logo" href="index.html">
+	      <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
+	    </a>
+	    <ul class="site-navigation">
+	      <li class="catalog-navigation">
+	      	<a href="catalog.html">Каталог</a>
+	      	<!--    <ul class="catalog-navigation-list">
+	    			<li>
+	    				<a href="catalog.html"><b>Новинки</b></a>
+	    			</li>
+	    			<li>
+	   	 				<a href="catalog.html">Сливочное</a>
+					</li>
+	    			<li>
+	    				<a href="catalog.html">Щербеты</a>
+	    			</li>
+	    			<li>
+	    				<a href="catalog.html">Фруктовый лёд</a>
+	    			</li>
+	    			<li>
+	    				<a href="catalog.html">Мелорин</a>
+	    			</li>
+	  			</ul>-->
+	      </li>
+	      <li>
+	      	<a href="blank.html">Доставка и оплата</a>
+	      </li>
+	      <li>
+	      	<a href="blank.html">О компании</a>
+	      </li>
+	    </ul>
+	    <div class="nav-button-container">
+		    <a class="modal-login modal-seach-button" href="#">
+		    	<img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
+		    </a>
+		    <a class="modal-login modal-login-button" href="#">
+		    	<img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">Вход
+		    </a>
+		    <a class="modal-login modal-basket-button" href="#">
+		    	<img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина">Пусто
+		    </a>
+		</div>	   
+	  </nav>
+	  <div class="nav-info-container" >    
+		    <p class="nav-info-text">с 10 до 20, ежедневно</p>
+		    <a class="nav-info-phone" href="tel:+78124502525">8 812 450-25-25</a>
+	  </div> 
+	</div>
 </header>
-<main class="container"> 
-	<ul class="breadcrumbs">
+<main class="container catalog-container"> 
+	<ul class="breadcrumbs" style="margin-top:-24px;">
     	<li><a href="index.html">Главная</a></li>
+		<li><span style="margin-right: 10px;">&#187;</span></li>	
     	<li><a href="catalog.html">Каталог</a></li>
+    	<li><span style="margin-right: 10px;">&#187;</span></li>	
     	<li><a href="#">Сливочное</a></li>
   	</ul>
 	<h1 class="main-title">Сливочное мороженое</h1>
-	<section>
+	<section class="filter-main">
 		<!--<h2>Фильтр товаров</h2>-->
 	    <form method="get" class="filter" action="catalog.html">
 	    	<fieldset>
 	        	<legend class="filter-title">Сортировка:</legend>
-		    	<select>
-		       		<option>
-		       			по популярности
-		       		</option>
-		       		<option>
-		       			сначала недорогие
-		       		</option>
-		       		<option>
-		       			сначала дорогие
-		       		</option>
-		       		<option>
-		       			по жирности
-		       		</option>
-		       	</select>
+	        	<div class="filter-container" >
+			    	<select  class="filter-select">
+			       		<option>
+			       			по популярности
+			       		</option>
+			       		<option>
+			       			сначала недорогие
+			       		</option>
+			       		<option>
+			       			сначала дорогие
+			       		</option>
+			       		<option>
+			       			по жирности
+			       		</option>
+			       	</select>
+			    </div>
 		    </fieldset>
 		    <fieldset>
+		  
 		        <legend class="filter-title">Цена: 100 ₽ – 500 ₽</legend>
-		        <input type="range" min="0" max="500" step="1" value="100"> 
+		     	<div class="filter-container" >
+		     		<input class="filter-range"  class="test" type="range" min="0" max="500" step="1" value="100"> 
+		     	</div>
 		    </fieldset>
 		    <fieldset>
 		        <legend class="filter-title">Жирность:</legend>
-		        <ul>
-		        	<li>
-		        		<input type="radio" name="product-fat" value="percent_0" id="percent_0">
-		        		<label for="percent_0">0%</label> 
-		        	</li>
-		        	<li>	           		
-	            		<input type="radio" name="product-fat" value="percent_below_10" id="percent_below_10" checked>
-	            		<label for="percent_below_10">до 10%</label> 
-	            	</li>
-		        	<li>	
-	            		<input type="radio" name="product-fat" value="percent_below_30" id="percent_below_30">
-	            		<label for="percent_below_30">до 30%</label> 
-	            	</li>
-		        	<li>	
-	            		<input type="radio" name="product-fat" value="percent_higher_30" id="percent_higher_30">
-	            		<label for="percent_higher_30">выше 30%</label> 
-	            	</li>
-		        	<li>	
-	            </ul>
+		        <div class="filter-container" >
+			        <ul class="filter-product-fat-list">
+			        	<li>
+			        		<input type="radio" name="product-fat" value="percent_0" id="percent_0">
+			        		<label for="percent_0">0%</label> 
+			        	</li>
+			        	<li>	           		
+		            		<input type="radio" name="product-fat" value="percent_below_10" id="percent_below_10" checked>
+		            		<label for="percent_below_10">до 10%</label> 
+		            	</li>
+			        	<li>	
+		            		<input type="radio" name="product-fat" value="percent_below_30" id="percent_below_30">
+		            		<label for="percent_below_30">до 30%</label> 
+		            	</li>
+			        	<li>	
+		            		<input type="radio" name="product-fat" value="percent_higher_30" id="percent_higher_30">
+		            		<label for="percent_higher_30">выше 30%</label> 
+		            	</li>		 	
+		            </ul>
+		        </div>
 		    </fieldset>
 		    <fieldset>
 		        <legend class="filter-title">Наполнители:</legend>
-		        <ul>
-		        	<li>
-		        		<input type="checkbox" name="chocolate" id="filler_chocolate"  checked>
-	            		<label for="filler_chocolate">шоколад</label> 
-		        	</li>
-		        	<li>
-		        		<input type="checkbox" name="sugar" id="filler_sugar"  checked>
-	            		<label for="filler_sugar">сахарные присыпки</label> 
-		        	</li>
-		        	<li>
-		        		<input type="checkbox" name="frut" id="filler_frut">
-	            		<label for="filler_frut">фрукты</label> 
-		        	</li>
-		        	<li>
-		        		<input type="checkbox" name="syrup" id="filler_syrup">
-	            		<label for="filler_syrup">сиропы</label> 
-		        	</li>
-		        	<li>
-		        		<input type="checkbox" name="jam" id="filler_jam">
-	            		<label for="filler_jam">джемы</label> 
-		        	</li>
-		        </ul>	
+		        <div class="filter-container" >
+			        <ul class="filter-filler" >
+			        	<li>
+			        		<input type="checkbox" name="chocolate" id="filler_chocolate"  checked>
+		            		<label for="filler_chocolate">шоколад</label> 
+			        	</li>
+			        	<li>
+			        		<input type="checkbox" name="sugar" id="filler_sugar"  checked>
+		            		<label for="filler_sugar">сахарные присыпки</label> 
+			        	</li>
+			        	<li>
+			        		<input type="checkbox" name="frut" id="filler_frut">
+		            		<label for="filler_frut">фрукты</label> 
+			        	</li>
+			        	<li>
+			        		<input type="checkbox" name="syrup" id="filler_syrup">
+		            		<label for="filler_syrup">сиропы</label> 
+			        	</li>
+			        	<li>
+			        		<input type="checkbox" name="jam" id="filler_jam">
+		            		<label for="filler_jam">джемы</label> 
+			        	</li>
+			        </ul>	
+			    </div>
 		    </fieldset>
 		    <button class="button-filter" type="submit">Применить</button>
 	    </form>	
 	</section>    
     <section class="catalog">
-    	<h2>Товары</h2>
+    	<!--<h2>Товары</h2>-->
     	<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-1">
 				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
@@ -286,7 +302,10 @@
 		</div>		
     </section>
     <div class="pagination">
-    	<ul>
+    	<ul class="pagination-main-list">
+	      <li class="pagination-list-2">
+	        <a class="active-page">&#8249;</a>
+	      </li>
 	      <li class="pagination-list">
 	        <a class="active-page">1</a>
 	      </li>
@@ -302,64 +321,69 @@
 	      <li class="pagination-list">
 	        <a href="#">5</a>
 	      </li>
+	      <li class="pagination-list">
+	        <a class="active-page">&#8250;</a>
+	      </li>
     	</ul>
     </div>
 </main>
 <footer class="main-footer">
-	  <section class="footer-social">
-    <h2>
-    	Наши соцсети
-    </h2>
-    <ul>
-    	<li>
-    		<a class="social-button" href="#">
-    			<img src="img/icons/FB.svg" width="32" height="32" alt="Фейсбук">
-        	</a>
-      	</li>
-      	<li>
-      		<a class="social-button" href="#">
-      			<img src="img/icons/VK.svg" width="32" height="32" alt="Вконтакте">
-        	</a>
-      	</li>
-      	<li>
-      		<a class="social-button" href="#">
-      			<img src="img/icons/IG.svg" width="32" height="32" alt="Инстаграм">
-        	</a>
-      	</li>
-      	<li>
-      		<a class="social-button" href="#">
-      			<img src="img/icons/TW.svg" width="32" height="32" alt="Твитер">
-        	</a>
-      	</li>
-    </ul>
-  </section>
-  <section class="footer-info">
-  	<h2>
-  		О нас
-    </h2>
-  	<ul class="footer-info-list">
-    	<li>
-        	<a href="#"><img src="img/icons/heart_ico.png" width="15" height="13" alt="Сердечко"> Для поставщиков</a>
-      	</li>
-      	<li>
-        	<a href="#">Наши документы</a>
-      	</li>
-      	<li>
-        	<a href="#">О производстве</a>
-      	</li>
-      	<li>
-        	<a href="#">Экологические стандарты</a>
-      	</li>
-    </ul>	 	
-  </section>
-    <a href="https://htmlacademy.ru">
-    	<img src="img/logo/logo_academy.svg" width="108" height="39" alt="Лого_разработчика">
-    </a>
-  	<p class="text-developer">
-  		Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
-  	</p>
+	<section class="footer-social">
+	    <!--<h2>
+	    	Наши соцсети
+	    </h2>-->
+	    <ul class="footer-social-list">
+	    	<li>
+	    		<a class="social-button" href="#">
+	    			<img src="img/icons/FB.svg" width="32" height="32" alt="Фейсбук">
+	        	</a>
+	      	</li>
+	      	<li>
+	      		<a class="social-button" href="#">
+	      			<img src="img/icons/VK.svg" width="32" height="32" alt="Вконтакте">
+	        	</a>
+	      	</li>
+	      	<li>
+	      		<a class="social-button" href="#">
+	      			<img src="img/icons/IG.svg" width="32" height="32" alt="Инстаграм">
+	        	</a>
+	      	</li>
+	      	<li>
+	      		<a class="social-button" href="#">
+	      			<img src="img/icons/TW.svg" width="32" height="32" alt="Твитер">
+	        	</a>
+	      	</li>
+	    </ul>
+ 	</section>
+    <section class="footer-info">
+	  	<!--<h2>
+	  		О нас
+	    </h2>-->
+	  	<ul class="footer-info-list">
+	    	<li>
+	        	<a href="#"><img src="img/icons/heart_ico.png" width="15" height="13" alt="Сердечко"> Для поставщиков</a>
+	      	</li>
+	      	<li>
+	        	<a href="#">Наши документы</a>
+	      	</li>
+	      	<li>
+	        	<a href="#">О производстве</a>
+	      	</li>
+	      	<li>
+	        	<a href="#">Экологические стандарты</a>
+	      	</li>
+	    </ul>	 	
+  	</section>
+  	<section class="footer-info-developer">
+	    <a href="https://htmlacademy.ru">
+	    	<img src="img/logo/logo_academy.svg" width="108" height="39" alt="Лого_разработчика">
+	    </a>
+	  	<p class="text-developer">
+	  		Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
+	  	</p>
+  	</section>	
 </footer>
-<section class="modal modal-login">
+<!--<section class="modal modal-login">
   <h2>Личный кабинет</h2>
   <form class="basic-form login-form" action="index.html" method="post">
     <p>
@@ -403,6 +427,6 @@
   <form action="index.html" method="post">
     <button class="button" type="submit">Оформить заказ</button>
   </form>
-</div>
+</div>-->
 </body>
 </html>
