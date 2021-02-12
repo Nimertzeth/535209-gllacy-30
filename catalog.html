@@ -7,80 +7,73 @@
    <link rel="icon" href="img/fav/favicon.svg" type="image/svg+xml">
    <link rel="apple-touch-icon" href="img/fav/favicon180.png">
    <link rel="manifest" href="manifest.webmanifest">
-</head>
-<!DOCTYPE html>
-<html class="page" lang="ru">
-<head>
-   <meta charset="utf-8">
-   <title>HTML Academy: Глейси</title>
-   <link rel="icon" href="favicon.ico?v=4">
-   <link rel="icon" href="img/fav/favicon.svg" type="image/svg+xml">
-   <link rel="apple-touch-icon" href="img/fav/favicon180.png">
-   <link rel="manifest" href="manifest.webmanifest">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="css/normalize.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
+   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+type="text/javascript"></script>
 </head>
 <body class="page-body">
 <header class="main-header">
   <div class="main-navigation" >
-	  <nav class="nav-main-container">
-	    <a class="main-header-logo" href="index.html">
-	      <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
-	    </a>
-	    <ul class="site-navigation">
-	      <li class="catalog-navigation">
-	      	<a href="catalog.html">Каталог</a>
-	      	<!--    <ul class="catalog-navigation-list">
-	    			<li>
-	    				<a href="catalog.html"><b>Новинки</b></a>
-	    			</li>
-	    			<li>
-	   	 				<a href="catalog.html">Сливочное</a>
-					</li>
-	    			<li>
-	    				<a href="catalog.html">Щербеты</a>
-	    			</li>
-	    			<li>
-	    				<a href="catalog.html">Фруктовый лёд</a>
-	    			</li>
-	    			<li>
-	    				<a href="catalog.html">Мелорин</a>
-	    			</li>
-	  			</ul>-->
-	      </li>
-	      <li>
-	      	<a href="blank.html">Доставка и оплата</a>
-	      </li>
-	      <li>
-	      	<a href="blank.html">О компании</a>
-	      </li>
-	    </ul>
-	    <div class="nav-button-container">
-		    <a class="modal-login modal-seach-button" href="#">
-		    	<img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
-		    </a>
-		    <a class="modal-login modal-login-button" href="#">
-		    	<img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">Вход
-		    </a>
-		    <a class="modal-login modal-basket-button" href="#">
-		    	<img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина">Пусто
-		    </a>
-		</div>	   
-	  </nav>
-	  <div class="nav-info-container" >    
-		    <p class="nav-info-text">с 10 до 20, ежедневно</p>
-		    <a class="nav-info-phone" href="tel:+78124502525">8 812 450-25-25</a>
-	  </div> 
-	</div>
+    <nav class="nav-main-container">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
+      </a>
+      <ul class="site-navigation">
+        <li class="catalog-navigation catalog-navigation-hover catalog-navigation-onpage">
+          <a>Каталог</a>
+          <!--    <ul class="catalog-navigation-list">
+            <li>
+              <a href="catalog.html"><b>Новинки</b></a>
+            </li>
+            <li>
+              <a href="catalog.html">Сливочное</a>
+          </li>
+            <li>
+              <a href="catalog.html">Щербеты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Фруктовый лёд</a>
+            </li>
+            <li>
+              <a href="catalog.html">Мелорин</a>
+            </li>
+          </ul>-->
+        </li>
+        <li class="catalog-navigation catalog-navigation-hover">
+          <a href="blank.html">Доставка и оплата</a>
+        </li>
+        <li class="catalog-navigation catalog-navigation-hover">
+          <a href="blank.html">О компании</a>
+        </li>
+      </ul>
+      <div class="nav-button-container">
+        <a class="modal-login modal-seach-button" href="#">
+          <img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
+        </a>
+        <a class="modal-login modal-login-button" href="#">
+          <img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">
+          <p>Вход</p>
+        </a>
+        <a class="modal-login modal-basket-button" href="#">
+          <img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина"><p>Пусто</p>
+        </a>
+    </div>     
+    </nav>
+    <div class="nav-info-container">    
+        <p class="nav-info-text">с 10 до 20, ежедневно</p>
+        <a class="nav-info-phone" href="tel:+78124502525">8 812 450-25-25</a>
+    </div> 
+  </div>
 </header>
 <main class="container catalog-container"> 
-	<ul class="breadcrumbs" style="margin-top:-24px;">
+	<ul class="breadcrumbs">
     	<li><a href="index.html">Главная</a></li>
-		<li><span style="margin-right: 10px;">&#187;</span></li>	
+		<li>&#187; </li>	
     	<li><a href="catalog.html">Каталог</a></li>
-    	<li><span style="margin-right: 10px;">&#187;</span></li>	
+    	<li>&#187; </li>	
     	<li><a href="#">Сливочное</a></li>
   	</ul>
 	<h1 class="main-title">Сливочное мороженое</h1>
@@ -178,6 +171,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-2">
@@ -189,6 +185,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочно-кофейное с кусочками шоколада</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>	
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-3">
@@ -200,6 +199,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочно-клубничное с присыпкой из белого шоколада</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-4">
@@ -211,6 +213,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочное крем-брюле  с карамельной подливкой</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>	
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-5">
@@ -222,6 +227,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочное с брусничным джемом</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-6">
@@ -233,6 +241,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочно-черничное с цельными ягодами черники</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>	
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-7">
@@ -244,6 +255,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочно-лимонное с карамельной присыпкой</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-8">
@@ -255,6 +269,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочное с шоколадной стружкой</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>	
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-9">
@@ -266,6 +283,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочно-ванильное с кусочками шоколада</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-10">
@@ -277,6 +297,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочноe с ментоловым сиропом</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>	
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-11">
@@ -288,6 +311,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочное с кусочками черного шоколада</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>
 		<div class="catalog-product">
     		<div class="catalog-product-img catalog-product-12">
@@ -299,6 +325,9 @@
 			<p class="catalog-product-text">
 				<a class="catalog-product-href">Сливочное с мятным сиропом</a>
 	 		</p>
+	 		<div class="button-wrapper">
+		 		<button class="button button-hit">Быстрый просмотр</button>
+		 	</div>
 		</div>		
     </section>
     <div class="pagination">
