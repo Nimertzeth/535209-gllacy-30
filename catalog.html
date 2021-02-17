@@ -21,44 +21,47 @@ type="text/javascript"></script>
       <a class="main-header-logo" href="index.html">
         <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
       </a>
-      <ul class="site-navigation">
-        <li class="catalog-navigation catalog-navigation-hover catalog-navigation-onpage">
-          <a>Каталог</a>
-          <!--    <ul class="catalog-navigation-list">
-            <li>
-              <a href="catalog.html"><b>Новинки</b></a>
-            </li>
-            <li>
-              <a href="catalog.html">Сливочное</a>
-          </li>
-            <li>
-              <a href="catalog.html">Щербеты</a>
-            </li>
-            <li>
-              <a href="catalog.html">Фруктовый лёд</a>
-            </li>
-            <li>
-              <a href="catalog.html">Мелорин</a>
-            </li>
-          </ul>-->
-        </li>
-        <li class="catalog-navigation catalog-navigation-hover">
-          <a href="blank.html">Доставка и оплата</a>
-        </li>
-        <li class="catalog-navigation catalog-navigation-hover">
-          <a href="blank.html">О компании</a>
-        </li>
-      </ul>
-      <div class="nav-button-container">
-        <a class="modal-login modal-seach-button" href="#">
-          <img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск">
-        </a>
-        <a class="modal-login modal-login-button" href="#">
-          <img src="img/icons/login_ico.png" width="20" height="19" alt="Вход">
-          <p>Вход</p>
-        </a>
-        <a class="modal-login modal-basket-button" href="#">
-          <img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина"><p>Пусто</p>
+	    <ul class="site-navigation">
+	      <li class="catalog-navigation catalog-navigation-hover catalog-navigation-onpage">
+	      	<a href="catalog.html">Каталог</a>
+	      	    <ul class="catalog-navigation-list">
+	    			<li class="catalog-navigation-list-container catalog-navigation-list-new">
+	    				<a class="catalog-navigation-list-link-main" href="catalog.html"><b>Новинки</b></a>
+	    			</li>
+	    			<hr class="catalog-navigation-list-border">
+	    			<li class="catalog-navigation-list-container">
+	   	 				<a class="catalog-navigation-list-link" href="catalog.html">Сливочное</a>
+					</li>
+	    			<li class="catalog-navigation-list-container">
+	    				<a class="catalog-navigation-list-link catalog-navigation-list-focus" href="catalog.html">Щербеты</a>
+	    			</li>
+	    			<li class="catalog-navigation-list-container">
+	    				<a class="catalog-navigation-list-link" href="catalog.html">Фруктовый лёд</a>
+	    			</li>
+	    			<li class="catalog-navigation-list-container">
+	    				<a class="catalog-navigation-list-link" href="catalog.html">Мелорин</a>
+	    			</li>
+	  			</ul>
+	      </li>
+	      <li class="catalog-navigation catalog-navigation-hover">
+	      	<a href="blank.html">Доставка и оплата</a>
+	      </li>
+	      <li class="catalog-navigation catalog-navigation-hover">
+	      	<a href="blank.html">О компании</a>
+	      </li>
+	    </ul>
+	    <div class="nav-button-container">
+		    <a class="modal-login modal-seach-button" href="#">
+		    	<div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
+		    	<div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
+		    </a>
+		    <a class="modal-login modal-login-button" href="#">
+		    	<img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
+		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
+		    	<p>Вход</p>
+		</a>
+        <a class="modal-login  modal-basket-button-full" href="#">
+          <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
         </a>
     </div>     
     </nav>
@@ -83,27 +86,29 @@ type="text/javascript"></script>
 	    	<fieldset>
 	        	<legend class="filter-title">Сортировка:</legend>
 	        	<div class="filter-container" >
-			    	<select  class="filter-select">
-			       		<option>
-			       			по популярности
-			       		</option>
-			       		<option>
-			       			сначала недорогие
-			       		</option>
-			       		<option>
-			       			сначала дорогие
-			       		</option>
-			       		<option>
-			       			по жирности
-			       		</option>
-			       	</select>
+			    	<div class="filter-select">
+			    		<ul>
+			    			<li class="filter-select-main">по популярности
+			    				<ul class="filter-select-list">
+			    					<li class="filter-select-list-element"><p>по популярности</p></li>
+			    					<li class="filter-select-list-element"><p>сначала недорогие</p></li>
+			    					<li class="filter-select-list-element"><p>сначала дорогие</p></li>
+			    					<li class="filter-select-list-element"><p>по жирности</p></li>
+			    				</ul>
+			    			</li>
+			    		</ul>
+			       	</div>
 			    </div>
 		    </fieldset>
-		    <fieldset>
-		  
+		    <fieldset>	  
 		        <legend class="filter-title">Цена: 100 ₽ – 500 ₽</legend>
-		     	<div class="filter-container" >
-		     		<input class="filter-range"  class="test" type="range" min="0" max="500" step="1" value="100"> 
+		     	<div class="filter-container">
+		     		<div class="filter-range">
+		     			<div class="filter-range-scale"></div>
+		     			<div class="filter-range-bar"></div>
+						<div class="filter-range-toggle toggle-min"></div>
+						<div class="filter-range-toggle toggle-max"></div>
+		     		</div>
 		     	</div>
 		    </fieldset>
 		    <fieldset>
@@ -111,48 +116,59 @@ type="text/javascript"></script>
 		        <div class="filter-container" >
 			        <ul class="filter-product-fat-list">
 			        	<li>
-			        		<input type="radio" name="product-fat" value="percent_0" id="percent_0">
-			        		<label for="percent_0">0%</label> 
+			        		<input class="input-fat-list" type="radio" name="product-fat" value="percent_0" id="percent_0">
+			        		<label id="lfl" class="label-fat-list" for="percent_0"></label>
+			       
 			        	</li>
+			        	<li class="product-fat-list-items"> <p>0%</p></li>
 			        	<li>	           		
-		            		<input type="radio" name="product-fat" value="percent_below_10" id="percent_below_10" checked>
-		            		<label for="percent_below_10">до 10%</label> 
+		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_below_10" id="percent_below_10" checked>
+		            		<label id="lfl" class="label-fat-list" for="percent_below_10"></label> 
 		            	</li>
+		            	<li class="product-fat-list-items"> <p>до 10%</p></li>
 			        	<li>	
-		            		<input type="radio" name="product-fat" value="percent_below_30" id="percent_below_30">
-		            		<label for="percent_below_30">до 30%</label> 
+		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_below_30" id="percent_below_30">
+		            		<label id="lfl" class="label-fat-list" for="percent_below_30"></label> 
 		            	</li>
+		            	<li class="product-fat-list-items"> <p>до 30%</p></li>
 			        	<li>	
-		            		<input type="radio" name="product-fat" value="percent_higher_30" id="percent_higher_30">
-		            		<label for="percent_higher_30">выше 30%</label> 
-		            	</li>		 	
+		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_higher_30" id="percent_higher_30">
+		            		<label class="label-fat-list" for="percent_higher_30"></label> 
+		            	</li>	
+		            	<li class="product-fat-list-items"> <p>выше 30%</p></li>	 	
 		            </ul>
 		        </div>
 		    </fieldset>
-		    <fieldset>
+		    
+		    <fieldset class="bottom-row">
 		        <legend class="filter-title">Наполнители:</legend>
 		        <div class="filter-container" >
-			        <ul class="filter-filler" >
+			        <ul class="filter-filler">
 			        	<li>
-			        		<input type="checkbox" name="chocolate" id="filler_chocolate"  checked>
-		            		<label for="filler_chocolate">шоколад</label> 
+			        		<input class="input-filler-list" type="checkbox" name="chocolate" id="filler_chocolate"  checked>
+		            		<label class="label-filler-list" for="filler_chocolate"></label> 
 			        	</li>
+			        	<li class="filler-list-items">шоколад</li>
 			        	<li>
-			        		<input type="checkbox" name="sugar" id="filler_sugar"  checked>
-		            		<label for="filler_sugar">сахарные присыпки</label> 
+			        		<input class="input-filler-list"type="checkbox" name="sugar" id="filler_sugar"  checked>
+		            		<label class="label-filler-list" for="filler_sugar"></label> 
 			        	</li>
+			        	<li class="filler-list-items">сахарные присыпки</li>
 			        	<li>
-			        		<input type="checkbox" name="frut" id="filler_frut">
-		            		<label for="filler_frut">фрукты</label> 
+			        		<input class="input-filler-list" type="checkbox" name="frut" id="filler_frut">
+		            		<label class="label-filler-list" for="filler_frut"></label> 
 			        	</li>
+			        	<li class="filler-list-items">фрукты</li>
 			        	<li>
-			        		<input type="checkbox" name="syrup" id="filler_syrup">
-		            		<label for="filler_syrup">сиропы</label> 
+			        		<input class="input-filler-list" type="checkbox" name="syrup" id="filler_syrup">
+		            		<label class="label-filler-list" for="filler_syrup"></label> 
 			        	</li>
+			        	<li class="filler-list-items">сиропы</li>
 			        	<li>
-			        		<input type="checkbox" name="jam" id="filler_jam">
-		            		<label for="filler_jam">джемы</label> 
+			        		<input class="input-filler-list" type="checkbox" name="jam" id="filler_jam">
+		            		<label class="label-filler-list" for="filler_jam"></label> 
 			        	</li>
+			        	<li class="filler-list-items">джемы</li>
 			        </ul>	
 			    </div>
 		    </fieldset>
@@ -356,8 +372,8 @@ type="text/javascript"></script>
     	</ul>
     </div>
 </main>
-<footer class="main-footer">
-	<section class="footer-social">
+<footer class="main-footer  main-footer-catalog">
+	<section class="footer-social footer-catalog-border-margin">
 	    <!--<h2>
 	    	Наши соцсети
 	    </h2>-->
@@ -384,13 +400,13 @@ type="text/javascript"></script>
 	      	</li>
 	    </ul>
  	</section>
-    <section class="footer-info">
+    <section class="footer-info footer-catalog-border-margin">
 	  	<!--<h2>
 	  		О нас
 	    </h2>-->
 	  	<ul class="footer-info-list">
-	    	<li>
-	        	<a href="#"><img src="img/icons/heart_ico.png" width="15" height="13" alt="Сердечко"> Для поставщиков</a>
+	    	<li class="dilers">
+	        	<a href="#">Для поставщиков</a>
 	      	</li>
 	      	<li>
 	        	<a href="#">Наши документы</a>
@@ -403,7 +419,7 @@ type="text/javascript"></script>
 	      	</li>
 	    </ul>	 	
   	</section>
-  	<section class="footer-info-developer">
+  	<section class="footer-info-developer footer-catalog-border-margin">
 	    <a href="https://htmlacademy.ru">
 	    	<img src="img/logo/logo_academy.svg" width="108" height="39" alt="Лого_разработчика">
 	    </a>
@@ -412,49 +428,32 @@ type="text/javascript"></script>
 	  	</p>
   	</section>	
 </footer>
-<!--<section class="modal modal-login">
-  <h2>Личный кабинет</h2>
-  <form class="basic-form login-form" action="index.html" method="post">
-    <p>
-      <input id="entrance_login" type="email" name="login" placeholder="email@example.com">
-    </p>
-    <p>
-      <input id="entrance_password" type="password" name="password" placeholder="......">
-    </p>
-    <button class="button" type="submit">Войти</button>
-  </form>
-  <a class="password-restore" href="#">Забыли пароль?</a>
-  <a class="new-user" href="#">Новая регистрация</a>
-</section>
-<section class="modal modal-seach">
-  <h2>Форма поиска</h2>
-  <form class="basic-form seach-form" action="index.html" method="get">
-      <input id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
-  </form>
-</section>
-<div class="modal modal-basket">
+<!--<div class="modal modal-basket">  
   <h2>Корзина</h2>
-  <div class="cart">
-	  <button class="button-delete" type="button">Удалить</button>
-	  <img src="img/icons/close_ico.png" width="18" height="17" alt="Кнопка_закрыть">
-	  <img src="img/catalog/product_1.jpg" width="33" height="33" alt="Товар1">
-	  <p>Пломбир с апельсиновым джемом</p > 
+  <div class="cart cart-margin-top" style="">
+	  <a href="" class="modal-basket-close">
+     	<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
+     </a>
+	  <img class="modal-basket-img" src="img/catalog/product_1.jpg" width="33" height="33" alt="Товар1">
+	  <p class="modal-basket-name">Пломбир с апельсиновым джемом</p > 
 	  <p class="cart-weight">1,5 кг х <span class="cart-price">200 руб.</span></p > 
 	  <p>300 руб.</p > 
   </div>
   <div class="cart">
-	  <button class="button-delete" type="button">Удалить</button>
-	  <img src="img/icons/close_ico.png" width="18" height="17" alt="Кнопка_закрыть">
-	  <img src="img/catalog/product_3.jpg" width="33" height="33" alt="Товар2">
-	  <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+	 <a href="" class="modal-basket-close">
+     	<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
+     </a>	 
+	  <img class="modal-basket-img" src="img/catalog/product_3.jpg" width="33" height="33" alt="Товар2">
+	  <p class="modal-basket-name">Клубничный пломбир с присыпкой из белого шоколада</p>
 	  <p class="cart-weight">1,5 кг х <span class="cart-price">300 руб.</span></p>
 	  <p> 450 руб.</p>	    
   </div>
-  <div class="cart-total">
+  <hr class="modal-basket-border">
+  <div class="cart-total"> 
   	  <p>Итого: 750 руб.</p>
   </div>
-  <form action="index.html" method="post">
-    <button class="button" type="submit">Оформить заказ</button>
+  <form class="form-cart" action="index.html" method="post">
+    <button class="button button-cart" type="submit">Оформить заказ</button>
   </form>
 </div>-->
 </body>
