@@ -15,16 +15,39 @@
 	type="text/javascript">
 	</script>
 	<script >	
-
-		function setSlide(k) {
-
-			document.querySelectorAll('.slide').forEach(slide=>{slide.style.display = "none"});
-			document.getElementById("slide"+k).style.display = "block";
-			document.body.style.setProperty("--slide-background","var(--background-"+k+")");
+		function myFunction1() {
+ 		var x = document.getElementById("slaid1");
+ 		var y = document.getElementById("body");
+ 		var z = document.getElementById("slaid2");
+ 		var w = document.getElementById("slaid3");
+ 		z.style.display = "none";
+ 		w.style.display = "none";
+ 		x.style.display = "block"; 
+ 		y.style.background = "var(--basic-backgound-green)";
+		}
+		function myFunction2() {
+ 		var x = document.getElementById("slaid2");
+ 		var y = document.getElementById("body");
+ 		var z = document.getElementById("slaid1");
+ 		var w = document.getElementById("slaid3");
+ 		x.style.display = "block"; 
+ 		z.style.display = "none";
+ 		w.style.display = "none";
+ 		y.style.background = "var(--basic-backgound-blue)";
+		}
+ 		function myFunction3() {
+ 		var x = document.getElementById("slaid3");
+ 		var y = document.getElementById("body");
+ 		var z = document.getElementById("slaid2"); 
+ 		var w = document.getElementById("slaid1");
+ 		x.style.display = "block"; 
+ 		w.style.display = "none";
+ 		z.style.display = "none";
+ 		y.style.background = "var(--basic-backgound-brown)";
 		}
 </script>
 </head>
-<body class="page-body">
+<body id="body" class="page-body">
 <header class="main-header">
   <div class="main-navigation" >
 	  <nav class="nav-main-container">
@@ -65,11 +88,6 @@
 		    	<div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
 		    	<div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
 		    </a>
-		    <section class="modal modal-seach">
-	  			<form class="basic-form seach-form" action="index.html" method="get">
-	      			<input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
-	  			</form>
-			</section>
 		    <a class="modal-login modal-login-button" href="#">
 		    	<img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
 		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
@@ -87,27 +105,27 @@
 	</div>
 </header>
 <main class="container"> 
-	<section class="slider-container">
+	<section class="slaider-container">
     	<!--<h2>Слайдер «Глейси»</h2>--> 
     	<div class="blur"></div>  	
-		<div id="slide1" class="slide slide1">
-			<h3 class="title-slide">Крем-брюле и пломбир<br> с малиновым джемом</h3>
-			<button class="button button-slider" type="submit">Давайте оба!</button>
+		<div id="slaid1" class="slaid slaid1">
+			<h3 class="title-slaid">Крем-брюле и пломбир<br> с малиновым джемом</h3>
+			<button class="button button-slaider" type="submit">Давайте оба!</button>
 		</div>
-		<div id="slide2" class="slide slide2">
-			<h3 class="title-slide">Шоколадный пломбир<br> и лимонный сорбет</h3>
-			<button class="button button-slider" type="submit">Давайте оба!</button>
+		<div id="slaid2" class="slaid slaid2">
+			<h3 class="title-slaid">Шоколадный пломбир<br> и лимонный сорбет</h3>
+			<button class="button button-slaider" type="submit">Давайте оба!</button>
 		</div>
-		<div id="slide3" class="slide slide3">
-			<h3 class="title-slide">Пломбир с помадкой<br> и клубничный щербет</h3>
-			<button class="button button-slider" type="submit">Давайте оба!</button>
+		<div id="slaid3" class="slaid slaid3">
+			<h3 class="title-slaid">Пломбир с помадкой<br> и клубничный щербет</h3>
+			<button class="button button-slaider" type="submit">Давайте оба!</button>
 		</div>	
-		<div class="slider-radio">
-  				<input type="radio" checked class="radio_slide" id="radio1" name="button" value="var(--basic-backgound-green)" onclick='setSlide(1)'>
+		<div class="slaider-radio">
+  				<input type="radio" checked class="radio_slaid" id="radio1" name="button" value="var(--basic-backgound-green)" onclick='myFunction1()'>
   				<label class="label-radio" id="label_radio1" for="radio1"></label>	
-				<input type="radio" class="radio_slide label-radio2" id="radio2" name="button" value="var(--basic-backgound-blue)" onclick='setSlide(2)'>
+				<input type="radio" class="radio_slaid label-radio2" id="radio2" name="button" value="var(--basic-backgound-blue)" onclick='myFunction2()'>
 				<label class="label-radio" id="label_radio2" for="radio2"></label>
-				<input type="radio" class="radio_slide" id="radio3" name="button" value="var(--basic-backgound-brown)" onclick='setSlide(3)'>
+				<input type="radio" class="radio_slaid" id="radio3" name="button" value="var(--basic-backgound-brown)" onclick='myFunction3()'>
 				<label class="label-radio" id="label_radio3" for="radio3"></label>
 			</div>
 	</section>
@@ -145,6 +163,7 @@
 	<section class="stocks">
 		<!--<h2>Акции «Глейси»</h2>-->
 		<div class="stocks-items stocks-items-rasp">
+			<!--<img src="img/background/rasp_back.jpg" width="560" height="229" alt="Акция1">-->
 			<h3 class="stocks-items_title">Малинка даром!</h3>
 			<p class="stocks-items_text">
 			При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
@@ -152,6 +171,7 @@
 			<button class="button stocks-items-button" type="submit">Хочу варенье!</button>
 		</div>	
 		<div class="stocks-items stocks-items-choc">	
+			<!--<img src="img/background/choc_back.jpg" width="560" height="229" alt="Акция2">-->
 			<h3 class="stocks-items_title">Шоколадки даром!</h3>
 			<p class="stocks-items_text">
 			При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
@@ -164,7 +184,7 @@
 		<div class="product-hit-cart">
 			<div class="product-hit-img product-hit-1">
 				<div class="product-hit-borderimg">
-					<img src="img/logo/hit_mark2.png" >
+					<img src="img/logo/hit_mark2.png">
 				</div>
 				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="Хит1">-->
 				<h3 class="product-hit-price">
@@ -404,7 +424,12 @@
   	</section>	
 </footer>
 <!--
- 
+ <section class="modal modal-seach">
+  
+  <form class="basic-form seach-form" action="index.html" method="get">
+      <input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
+  </form>
+</section>
  <section class="modal modal-login">
 
   <form class="basic-form login-form" action="index.html" method="post">
