@@ -14,15 +14,8 @@
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 	type="text/javascript">
 	</script>
-	<script >	
-
-		function setSlide(k) {
-
-			document.querySelectorAll('.slide').forEach(slide=>{slide.style.display = "none"});
-			document.getElementById("slide"+k).style.display = "block";
-			document.body.style.setProperty("--slide-background","var(--background-"+k+")");
-		}
-</script>
+	<script src="js/slider.js"></script>
+	<script src="js/map.js"></script>
 </head>
 <body class="page-body">
 <header class="main-header">
@@ -75,6 +68,17 @@
 		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
 		    	<p>Вход</p>
 		    </a>
+		    <section class="modal modal-personal">
+  				<form class="basic-form login-form" action="index.html" method="post">
+					<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
+					<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
+					<div class="login-form-container">
+						<button class="button login-form-button" type="submit">Войти</button>
+						<a class="password-restore link-login-form" href="#">Забыли пароль?</a>
+					  	<a class="new-user link-login-form" href="#">Новая регистрация</a>
+					</div>
+  				</form>
+			</section>
 		    <a class="modal-login modal-basket-button" href="#">
 		    	<img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина"><p>Пусто</p>
 		    </a>
@@ -111,37 +115,6 @@
 				<label class="label-radio" id="label_radio3" for="radio3"></label>
 			</div>
 	</section>
-	<script > /*	
-			setTimeout(function(){
-		    myFunction2(),radio2.checked = true;//вызов функции из скрипта.
-		    },5000)
-		    setTimeout(function(){
-		    myFunction3(),radio3.checked = true;//вызов функции из скрипта.
-		    },10000)
-		    setTimeout(function(){
-		    myFunction1(),radio1.checked = true;//вызов функции из скрипта.
-		    },15000)
-   
-			
-		var i = 1;
-		var a = i;
-		if (a == 1) {i++
-			setInterval(() =>setTimeout(function(){
-         myFunction2(),radio2.checked = true,i++;//вызов функции из скрипта.
-    },2000))	
-		}
-		if (radio2.checked == true){
-			i++
-			setInterval(() =>setTimeout(function(){
-         myFunction3(),radio3.checked = true;//вызов функции из скрипта.
-    },6000))
-			
-		}
-		if(a == 3){
-			i++
-			alert(i)
-		}*/
-		</script>
 	<section class="stocks">
 		<!--<h2>Акции «Глейси»</h2>-->
 		<div class="stocks-items stocks-items-rasp">
@@ -166,7 +139,6 @@
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png" >
 				</div>
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="Хит1">-->
 				<h3 class="product-hit-price">
 				310 Р/кг
 				</h3>
@@ -183,7 +155,6 @@
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png">
 				</div>
-				<!--<img src="img/catalog/product_2.jpg" width="267" height="267" alt="Хит2">-->
 				<h3 class="product-hit-price">
 				380 Р/кг
 				</h3>
@@ -200,7 +171,6 @@
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png">
 				</div>
-				<!--<img src="img/catalog/product_3.jpg" width="267" height="267" alt="Хит3">-->
 				<h3 class="product-hit-price">
 				355 Р/кг
 				</h3>				
@@ -217,7 +187,6 @@
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png">
 				</div>
-				<!--<img src="img/catalog/product_4.jpg" width="267" height="267" alt="Хит4">-->
 				<h3 class="product-hit-price">
 				415 Р/кг
 				</h3>				
@@ -272,7 +241,6 @@
 	<div class="interactive-container" >
 		<section class="blog">	
 			<!--<h2>Блог</h2>-->
-			<!--<img src="img/background/straw_back.jpg" width="560" height="229" alt="Фон_блога">-->
 			<p class="blog-text">Новое в нашем блоге
 			</p>
 			<div class="blog-href-container">
@@ -283,7 +251,6 @@
 		<section class="subscription">
 			<div class="subscription-main">
 				<!--<h2> Подписаться на «Глейси» </h2>-->
-				<!--<img src="img/background/mail_back.jpg" width="560" height="229" alt="Фон_блока_подписки">-->
 				<p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить<br> и не слать всякой ненужной ерунды. Честно =)
 				</p>
 				<form class="basic-form subscription-form" action="index.html" method="post">
@@ -292,65 +259,41 @@
 		   				<button class="button button-subscription" type="button">Отправить</button>
 		   			</div>
 		  		</form>
-		  	</div>	
-	  
+		  		<section class="map-contacts">
+					<div class="contacts">
+						<!--<h2>Контакты</h2>-->	
+						<div class="contacts-container">
+							<p class="contacts-text">Адрес главного офиса<br> и офлайн-магазина:
+								<br>
+								<a class="contacts-text-important">
+									ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург
+								</a><br><br>
+								 Для заказов по телефону:
+								<br>
+								<a class="contacts-text-important" href="tel:+78124502525">
+								8 812 450-25-25</a>
+								<br> 
+								(с 10 до 20 ежедневно)
+							</p>
+							<button class="button button-contacts" type="button">
+								Форма обратной связи
+							</button>
+						</div>
+					</div>	
+				</section>
+		  	</div>		  
 		</section>
 	</div>	
 	<div class="map-contacts-container">
-		<div id="yandexmap" class="yandexmap">
-			<script>
-					var map;
-					var marker;
-					function initMap ()
-					  {
-					  map = new ymaps.Map("yandexmap", {
-					    center: [59.939275, 30.329199],
-					    zoom: 16
-					    });
-					  map.behaviors.disable('scrollZoom');
-					  marker = new ymaps.Placemark([59.938635, 30.323118], {
-			            balloonContent: 'Маленькая иконка'
-			        		}, {
-			            iconLayout: 'default#image',
-			            iconImageHref: 'img/icons/map_mark.png',
-			            iconImageSize: [80, 140],
-			            iconImageOffset: [-37, -130],
-			        		})
-					  map.geoObjects.add(marker);
-					    }
-					  ymaps.ready(initMap);
-
-				</script>
-			<section class="map-contacts">
-				<div class="contacts">
-					<!--<h2>Контакты</h2><h3>Здесь наша карта!</h3>-->	
-					<div class="contacts-container">
-						<p class="contacts-text">Адрес главного офиса<br> и офлайн-магазина:
-							<br>
-							<a class="contacts-text-important">
-								ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург
-							</a><br><br>
-							 Для заказов по телефону:
-							<br>
-							<a class="contacts-text-important" href="tel:+78124502525">
-							8 812 450-25-25</a>
-							<br> 
-							(с 10 до 20 ежедневно)
-						</p>
-						<button class="button button-contacts" type="button">
-							Форма обратной связи
-						</button>
-					</div>
-				</div>	
-			</section>
-		</div>
-		
+		<!--<h3>Здесь наша карта!</h3>-->
+		<div id="yandexmap" class="yandexmap">		
+		</div>		
 	</div>	
 </main>
 <footer class="main-footer">
 	<section class="footer-social">
 	    <!--<h2>
-	    	Наши соцсети
+	    	Cоцсети
 	    </h2>-->
 	    <ul class="footer-social-list">
 	    	<li>
@@ -404,20 +347,6 @@
   	</section>	
 </footer>
 <!--
- 
- <section class="modal modal-login">
-
-  <form class="basic-form login-form" action="index.html" method="post">
-	<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
-	<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
-	<div class="login-form-container">
-	    <button class="button login-form-button" type="submit">Войти</button>
-	    <a class="password-restore link-login-form" href="#">Забыли пароль?</a>
-  		<a class="new-user link-login-form" href="#">Новая регистрация</a>
-	</div>
-  </form>
-</section>
-
 <section class="modal modal-feedback">
   <form class="basic-form feedback-form" action="index.html" method="post">
   	<h2>Мы обязательно Вам ответим!</h2>
