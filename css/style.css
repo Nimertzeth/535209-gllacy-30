@@ -188,7 +188,7 @@ ul {margin: 0;
 }
 .modal-personal{
 	top:-10px;
-	right: 370px;
+	left: calc(160vw / 2 - 2px);
 	position: absolute;
 	display: none;
 	z-index: 111;
@@ -1425,16 +1425,13 @@ align-items: center;
 	position: absolute;
 	display: none;
 	top: 60px;
-	right: 590px;
+	left: calc(100vw / 2 - 8px);
 	z-index: 9999;
 }
 .seach-form{
 	background: var(--basic-grey-back);
 	box-shadow: 0px 20px 20px var(--box-shadow-list);
 	border-radius: 4px;
-}
-.modal-seach-button:hover + .modal-seach{
-	
 }
 .search_product{
 	margin: 20px 15px;
@@ -1550,7 +1547,7 @@ align-items: center;
 .modal-basket{
 	position: absolute;
 	top:60px;
-	right:378px;
+	left: calc(100vw / 2 + 26px);
 	display: none;
 	width: 539px;
 	background: var(--basic-grey-back);
