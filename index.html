@@ -11,12 +11,13 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="css/normalize.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 	type="text/javascript">
 	</script>
 	<script src="js/slider.js"></script>
 	<script src="js/map.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/modal.js"></script>
 </head>
 <body class="page-body">
 <header class="main-header">
@@ -37,7 +38,7 @@
 	   	 				<a class="catalog-navigation-list-link" href="catalog.html">Сливочное</a>
 					</li>
 	    			<li class="catalog-navigation-list-container">
-	    				<a class="catalog-navigation-list-link" href="">Щербеты</a>
+	    				<a class="catalog-navigation-list-link" href="catalog.html">Щербеты</a>
 	    			</li>
 	    			<li class="catalog-navigation-list-container">
 	    				<a class="catalog-navigation-list-link" href="catalog.html">Фруктовый лёд</a>
@@ -55,40 +56,16 @@
 	      </li>
 	    </ul>
 	   <div class="nav-button-container">
-		    <a onclick="seachForm()" class="modal-login modal-seach-button" href="#">
+		    <a onclick="seachForm()" class="modal-login modal-seach-button">
 		    	<div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
 		    	<div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
-		    </a>
-			<script type="text/javascript">
-				function seachForm(){
- 		var x = document.getElementById("modal-seach");
- 		x.style.display = "block"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-seach-button').length || $(e.target).closest('.modal-seach').length ) {
-         	return;
-    	}
-    $('.modal-seach').fadeOut();
-});	
-			</script>
-		    <a onclick="loginForm()"  class="modal-login modal-login-button" href="#">
+		    </a>			
+		    <a onclick="loginForm()"  class="modal-login modal-login-button">
 		    	<img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
 		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
 		    	<p>Вход</p>
-		    </a>
-						<script type="text/javascript">
-				function loginForm(){
- 		var x = document.getElementById("modal-personal");
- 		x.style.display = "block"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-login-button').length || $(e.target).closest('.modal-personal').length ) {
-         	return;
-    	}
-    $('.modal-personal').fadeOut();
-});	
-			</script>
-		    <a class="modal-login modal-basket-button" href="#">
+		    </a>						
+		    <a class="modal-login modal-basket-button">
 		    	<img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина"><p>Пусто</p>
 		    </a>
 		</div>	   
@@ -145,7 +122,7 @@
 		<h2 class="visually-hidden">Товары "ХИТ"</h2>
 		<div class="product-hit-cart">
 			<div class="product-hit-detail">
-				<img class="product-hit-image" src="img/catalog/product_1.jpg" >
+				<img class="product-hit-image" src="img/catalog/product_1.jpg" width="267" height="267" alt="хит1" >
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png" >
 				</div>
@@ -162,7 +139,7 @@
 		</div>	
 		<div class="product-hit-cart">
 			<div class="product-hit-detail">
-				<img class="product-hit-image" src="img/catalog/product_2.jpg" >
+				<img class="product-hit-image" src="img/catalog/product_2.jpg" width="267" height="267" alt="хит2">
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png">
 				</div>
@@ -179,7 +156,7 @@
 		</div>
 		<div class="product-hit-cart">	
 			<div class="product-hit-detail">
-				<img class="product-hit-image" src="img/catalog/product_3.jpg" >
+				<img class="product-hit-image" src="img/catalog/product_3.jpg" width="267" height="267" alt="хит3">
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png">
 				</div>
@@ -196,7 +173,7 @@
 		</div> 	
 		<div class="product-hit-cart">	
 			<div class="product-hit-detail">
-				<img class="product-hit-image" src="img/catalog/product_4.jpg" >
+				<img class="product-hit-image" src="img/catalog/product_4.jpg" width="267" height="267" alt="хит4">
 				<div class="product-hit-borderimg">
 					<img src="img/logo/hit_mark2.png">
 				</div>
@@ -297,22 +274,6 @@
 		  	</div>		  
 		</section>
 	</div>	
-<script type="text/javascript">
-	function feedbackForm(){
- 		var x = document.getElementById("feedback-form");
- 		x.style.display = "block"; 
-		}
-	function closeForm(){
- 		var x = document.getElementById("feedback-form");
- 		x.style.display = "none"; 
-		}	
-	$(document).click( function(e){
-    	if ( $(e.target).closest('.button-contacts').length || $(e.target).closest('.feedback-form').length ) {
-        return;
-    	}
-    $('.feedback-form').fadeOut();
-});	
-</script>
 	<div class="map-contacts-container">
 		<h3 class="visually-hidden">Здесь наша карта!</h3>
 		<div id="yandexmap" class="yandexmap">		
@@ -349,16 +310,16 @@
 		<h2 class="visually-hidden">О нас</h2>
 	  	<ul class="footer-info-list">
 	    	<li class="dilers">
-	        	<a href="#">Для поставщиков</a>
+	        	<a href="blank.html">Для поставщиков</a>
 	      	</li>
 	      	<li>
-	        	<a href="#">Наши документы</a>
+	        	<a href="blank.html">Наши документы</a>
 	      	</li>
 	      	<li>
-	        	<a href="#">О производстве</a>
+	        	<a href="blank.html">О производстве</a>
 	      	</li>
 	      	<li>
-	        	<a href="#">Экологические стандарты</a>
+	        	<a href="blank.html">Экологические стандарты</a>
 	      	</li>
 	    </ul>	 	
   	</section>
@@ -371,9 +332,8 @@
 	  	</p>
   	</section>	
 </footer>
-
 <section class="modal modal-feedback">
-  <form class="basic-form feedback-form" id="feedback-form" action="index.html" method="post">
+  <form class="basic-form feedback-form" id="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
   	<h2>Мы обязательно Вам ответим!</h2>
     <p>
       <input class="subscribe-name" id="subscribe_name" type="text" name="subscribe_name" placeholder="Имя Фамилия">
@@ -393,13 +353,13 @@
 </section>
 <h2 class="visually-hidden">Форма поиска</h2>
 <section class="modal modal-seach" id="modal-seach">
-	<form class="basic-form seach-form" action="index.html" method="get">
+	<form class="basic-form seach-form" action="https://echo.htmlacademy.ru/" method="get">
 	    <input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
 	</form>
 </section>
 <h2 class="visually-hidden">Личный кабинет</h2>
 <section class="modal modal-personal" id="modal-personal">
-  	<form class="basic-form login-form" action="index.html" method="post">
+  	<form class="basic-form login-form" action="https://echo.htmlacademy.ru/" method="post">
 		<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
 		<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
 		<div class="login-form-container">

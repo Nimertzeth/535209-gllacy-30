@@ -11,10 +11,11 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="css/normalize.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 	type="text/javascript">
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/modal.js"></script>
 </head>
 <body class="page-body">
 <header class="main-header">
@@ -53,56 +54,18 @@
 	      </li>
 	    </ul>
 	    <div class="nav-button-container">
-		    <a onclick="seachForm()" class="modal-login modal-seach-button" href="#">
+		    <a onclick="seachForm()" class="modal-login modal-seach-button">
 		    	<div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
 		    	<div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
 		    </a>
-		 
-			<script type="text/javascript">
-				function seachForm(){
- 		var x = document.getElementById("modal-seach");
- 		x.style.display = "block"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-seach-button').length || $(e.target).closest('.modal-seach').length ) {
-         	return;
-    	}
-    $('.modal-seach').fadeOut();
-});	
-			</script>
-		    <a onclick="loginForm()"  class="modal-login modal-login-button" href="#">
+		    <a onclick="loginForm()"  class="modal-login modal-login-button">
 		    	<img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
 		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
 		    	<p>Вход</p>
 		    </a>
-
-						<script type="text/javascript">
-				function loginForm(){
- 		var x = document.getElementById("modal-personal");
- 		x.style.display = "block"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-login-button').length || $(e.target).closest('.modal-personal').length ) {
-         	return;
-    	}
-    $('.modal-personal').fadeOut();
-});	
-			</script>
-	        <a onclick="basketForm()" class="modal-login  modal-basket-button-full" href="#">
+	        <a onclick="basketForm()" class="modal-login  modal-basket-button-full">
 	          <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
 	        </a>
-	        <script type="text/javascript">
-				function basketForm(){
- 		var x = document.getElementById("modal-basket");
- 		x.style.display = "grid"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-basket-button-full').length || $(e.target).closest('.modal-basket').length ) {
-         	return;
-    	}
-    $('.modal-basket').fadeOut();
-});	
-			</script>
     </nav>
     <div class="nav-info-container">    
         <p class="nav-info-text">с 10 до 20, ежедневно</p>
@@ -120,11 +83,11 @@
   	</ul>
 	<h1 class="main-title">Сливочное мороженое</h1>
 	<section class="filter-main">
-		<!--<h2>Фильтр товаров</h2>-->
-	    <form method="get" class="filter" action="catalog.html">
+		<h2 class="visually-hidden">Фильтр товаров</h2>
+	    <form method="get" class="filter" action="https://echo.htmlacademy.ru/">
 	    	<fieldset>
 	        	<legend class="filter-title">Сортировка:</legend>
-	        	<div class="filter-container" >
+	        	<div class="filter-container">
 			    	<div class="filter-select">
 			    		<ul>
 			    			<li class="filter-select-main">по популярности
@@ -159,22 +122,22 @@
 			        		<label id="lfl" class="label-fat-list" for="percent_0"></label>
 			       
 			        	</li>
-			        	<li class="product-fat-list-items"> <p>0%</p></li>
+			        	<li class="product-fat-list-items"><p>0%</p></li>
 			        	<li>	           		
 		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_below_10" id="percent_below_10" checked>
 		            		<label id="lfl" class="label-fat-list" for="percent_below_10"></label> 
 		            	</li>
-		            	<li class="product-fat-list-items"> <p>до 10%</p></li>
+		            	<li class="product-fat-list-items"><p>до 10%</p></li>
 			        	<li>	
 		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_below_30" id="percent_below_30">
 		            		<label id="lfl" class="label-fat-list" for="percent_below_30"></label> 
 		            	</li>
-		            	<li class="product-fat-list-items"> <p>до 30%</p></li>
+		            	<li class="product-fat-list-items"><p>до 30%</p></li>
 			        	<li>	
 		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_higher_30" id="percent_higher_30">
 		            		<label class="label-fat-list" for="percent_higher_30"></label> 
 		            	</li>	
-		            	<li class="product-fat-list-items"> <p>выше 30%</p></li>	 	
+		            	<li class="product-fat-list-items"><p>выше 30%</p></li>	 	
 		            </ul>
 		        </div>
 		    </fieldset>
@@ -215,7 +178,7 @@
 	    </form>	
 	</section>    
     <section class="catalog">
-    	<!--<h2>Товары</h2>-->
+    	<h2 class="visually-hidden">Товары</h2>
     	<div class="product-hit-cart">
     		<div class="product-hit-detail">
 				<img class="product-hit-image" src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">
@@ -413,9 +376,7 @@
 </main>
 <footer class="main-footer  main-footer-catalog">
 	<section class="footer-social footer-catalog-border-margin">
-	    <!--<h2>
-	    	Наши соцсети
-	    </h2>-->
+	<h2  class="visually-hidden">Наши соцсети</h2>
 	    <ul class="footer-social-list">
 	    	<li>
 	    		<a class="social-button" href="#">
@@ -440,21 +401,19 @@
 	    </ul>
  	</section>
     <section class="footer-info footer-catalog-border-margin">
-	  	<!--<h2>
-	  		О нас
-	    </h2>-->
+	<h2  class="visually-hidden">О нас</h2>
 	  	<ul class="footer-info-list">
 	    	<li class="dilers">
-	        	<a href="#">Для поставщиков</a>
+	        	<a href="blank.html">Для поставщиков</a>
 	      	</li>
 	      	<li>
-	        	<a href="#">Наши документы</a>
+	        	<a href="blank.html">Наши документы</a>
 	      	</li>
 	      	<li>
-	        	<a href="#">О производстве</a>
+	        	<a href="blank.html">О производстве</a>
 	      	</li>
 	      	<li>
-	        	<a href="#">Экологические стандарты</a>
+	        	<a href="blank.html">Экологические стандарты</a>
 	      	</li>
 	    </ul>	 	
   	</section>
@@ -468,12 +427,12 @@
   	</section>	
 </footer>
 <section class="modal modal-seach" id="modal-seach">
-	<form class="basic-form seach-form" action="index.html" method="get">
+	<form class="basic-form seach-form" action="https://echo.htmlacademy.ru/" method="get">
 	    <input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
 	</form>
 </section>
 <section class="modal modal-personal" id="modal-personal">
-  	<form class="basic-form login-form" action="index.html" method="post">
+  	<form class="basic-form login-form" action="https://echo.htmlacademy.ru/" method="post">
 		<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
 		<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
 		<div class="login-form-container">
@@ -507,7 +466,7 @@
 	<div class="cart-total"> 
 		<p>Итого: 750 руб.</p>
 	</div>
-	<form class="form-cart" action="index.html" method="post">
+	<form class="form-cart" action="https://echo.htmlacademy.ru/" method="post">
 		<button class="button button-cart" type="submit">Оформить заказ</button>
 	</form>
 </div>     
