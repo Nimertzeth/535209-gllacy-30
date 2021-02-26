@@ -1,0 +1,143 @@
+.breadcrumbs{
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	
+}
+.breadcrumbs a{
+	border-bottom: 1px solid var(--basic-hit-href);
+}
+/*Фильтр*/
+.main-title{
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 41px;
+}
+.filter, .button-filter{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-white);
+	background: var(--basic-hit-href);
+	border-radius: 20px;
+}
+.filter-title{
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+}
+.button-filter{
+	background: var(--basic-hit-href);
+	border: 2px solid var(--basic-white);
+	border-radius: 20px;
+}
+.filter select{
+	background:var(--basic-backgound-green);
+	color:var(--basic-white);
+}
+.filter select:hover{
+	font-weight: 500;
+	color:var(--basic-black);
+}
+.button-filter{
+	background: var(--basic-hit-href);
+	border: 2px solid var(--basic-white);
+	border-radius: 20px;
+}
+.button-filter:hover{
+	background: var(--basic-white);
+	border: none;
+	border-radius: 20px;
+	color:var(--basic-black);
+}
+.button-filter:focus{
+	box-shadow: inset 0px 2px 1px var(--menu-focus-shadow);
+	background: var(--basic-white);
+	border: none;
+	border-radius: 20px;
+	color:var(--basic-black);
+}
+/*Товары*/
+.catalog-product{
+	width: 267px;
+	height: 324px;
+}
+.catalog-product:hover{
+	background: var(--basic-white);
+	opacity: 0.2;
+	box-shadow: 0px 20px 20px var(--box-shadow);
+	width: 293px;
+	height: 402px;
+	border-radius: 4px;
+}
+.catalog-product-img{
+	width: 267px;
+	height: 267px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	border-radius:50%;
+}
+.catalog-product-price{
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 45px;
+}
+.catalog-product-text{
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+}
+.catalog-product-href{
+	border-bottom: 1px solid var(--basic-hit-href);
+}
+.catalog-product-1{
+	background-image: url(../img/catalog/product_1.jpg);
+}
+.catalog-product-2{
+	background-image: url(../img/catalog/product_2.jpg);
+}
+.catalog-product-3{
+	background-image: url(../img/catalog/product_3.jpg);
+}
+.catalog-product-4{
+	background-image: url(../img/catalog/product_4.jpg);
+}
+.catalog-product-5{
+	background-image: url(../img/catalog/product_1.jpg);
+}
+.catalog-product-6{
+	background-image: url(../img/catalog/product_2.jpg);
+}
+.catalog-product-7{
+	background-image: url(../img/catalog/product_3.jpg);
+}
+.catalog-product-8{
+	background-image: url(../img/catalog/product_4.jpg);
+}
+.catalog-product-9{
+	background-image: url(../img/catalog/product_1.jpg);
+}
+.catalog-product-10{
+	background-image: url(../img/catalog/product_2.jpg);
+}
+.catalog-product-11{
+	background-image: url(../img/catalog/product_3.jpg);
+}
+.catalog-product-12{
+	background-image: url(../img/catalog/product_4.jpg);
+}
+/*Пагинация*/
+.pagination{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-white); 
+}
+.pagination-list:first-child a{
+	color: var(--basic-black);
+	background: var(--basic-white);
+}
+.pagination a:hover{ 
+	background: var(--basic-hit-href);
+}

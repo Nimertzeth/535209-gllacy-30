@@ -12,7 +12,9 @@
    <link href="css/normalize.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-type="text/javascript"></script>
+	type="text/javascript">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body class="page-body">
 <header class="main-header">
@@ -51,63 +53,56 @@ type="text/javascript"></script>
 	      </li>
 	    </ul>
 	    <div class="nav-button-container">
-		    <a class="modal-login modal-seach-button" href="#">
+		    <a onclick="seachForm()" class="modal-login modal-seach-button" href="#">
 		    	<div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
 		    	<div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
 		    </a>
-		    <section class="modal modal-seach">
-	  			<form class="basic-form seach-form" action="index.html" method="get">
-	      			<input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
-	  			</form>
-			</section>
-		    <a class="modal-login modal-login-button" href="#">
+		 
+			<script type="text/javascript">
+				function seachForm(){
+ 		var x = document.getElementById("modal-seach");
+ 		x.style.display = "block"; 
+		}
+		$(document).click( function(e){
+    		if ( $(e.target).closest('.modal-seach-button').length || $(e.target).closest('.modal-seach').length ) {
+         	return;
+    	}
+    $('.modal-seach').fadeOut();
+});	
+			</script>
+		    <a onclick="loginForm()"  class="modal-login modal-login-button" href="#">
 		    	<img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
 		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
 		    	<p>Вход</p>
 		    </a>
-		    <section class="modal modal-personal">
-  				<form class="basic-form login-form" action="index.html" method="post">
-					<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
-					<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
-					<div class="login-form-container">
-						<button class="button login-form-button" type="submit">Войти</button>
-						<a class="password-restore link-login-form" href="#">Забыли пароль?</a>
-					  	<a class="new-user link-login-form" href="#">Новая регистрация</a>
-					</div>
-  				</form>
-			</section>
-	        <a class="modal-login  modal-basket-button-full" href="#">
+
+						<script type="text/javascript">
+				function loginForm(){
+ 		var x = document.getElementById("modal-personal");
+ 		x.style.display = "block"; 
+		}
+		$(document).click( function(e){
+    		if ( $(e.target).closest('.modal-login-button').length || $(e.target).closest('.modal-personal').length ) {
+         	return;
+    	}
+    $('.modal-personal').fadeOut();
+});	
+			</script>
+	        <a onclick="basketForm()" class="modal-login  modal-basket-button-full" href="#">
 	          <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
 	        </a>
-	        <!--<h2>Корзина</h2>-->
-			<div class="modal modal-basket">  
-			  <div class="cart cart-margin-top" style="">
-				  <a href="" class="modal-basket-close">
-			     	<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
-			     </a>
-				  <img class="modal-basket-img" src="img/catalog/product_1.jpg" width="33" height="33" alt="Товар1">
-				  <p class="modal-basket-name">Пломбир с апельсиновым джемом</p > 
-				  <p class="cart-weight">1,5 кг х <span class="cart-price">200 руб.</span></p > 
-				  <p>300 руб.</p > 
-			  </div>
-			  <div class="cart">
-				 <a href="" class="modal-basket-close">
-			     	<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
-			     </a>	 
-				  <img class="modal-basket-img" src="img/catalog/product_3.jpg" width="33" height="33" alt="Товар2">
-				  <p class="modal-basket-name">Клубничный пломбир с присыпкой из белого шоколада</p>
-				  <p class="cart-weight">1,5 кг х <span class="cart-price">300 руб.</span></p>
-				  <p> 450 руб.</p>	    
-			  </div>
-			  <hr class="modal-basket-border">
-			  <div class="cart-total"> 
-			  	  <p>Итого: 750 руб.</p>
-			  </div>
-			  <form class="form-cart" action="index.html" method="post">
-			    <button class="button button-cart" type="submit">Оформить заказ</button>
-			  </form>
-			</div>
-    	</div>     
+	        <script type="text/javascript">
+				function basketForm(){
+ 		var x = document.getElementById("modal-basket");
+ 		x.style.display = "grid"; 
+		}
+		$(document).click( function(e){
+    		if ( $(e.target).closest('.modal-basket-button-full').length || $(e.target).closest('.modal-basket').length ) {
+         	return;
+    	}
+    $('.modal-basket').fadeOut();
+});	
+			</script>
     </nav>
     <div class="nav-info-container">    
         <p class="nav-info-text">с 10 до 20, ежедневно</p>
@@ -221,169 +216,169 @@ type="text/javascript"></script>
 	</section>    
     <section class="catalog">
     	<!--<h2>Товары</h2>-->
-    	<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-1">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+    	<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">
+				<h3 class="product-hit-price">
 				310 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-2">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_2.jpg" width="267" height="267" alt="товар2">
+				<h3 class="product-hit-price">
 				380 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочно-кофейное с кусочками шоколада</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочно-кофейное с кусочками шоколада</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>	
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-3">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_3.jpg" width="267" height="267" alt="товар3">
+				<h3 class="product-hit-price">
 				355 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочно-клубничное с присыпкой из белого шоколада</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-4">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_4.jpg" width="267" height="267" alt="товар4">
+				<h3 class="product-hit-price">
 				415 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочное крем-брюле  с карамельной подливкой</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочное крем-брюле  с карамельной подливкой</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>	
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-5">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_5.jpg" width="267" height="267" alt="товар5">
+				<h3 class="product-hit-price">
 				325 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочное с брусничным джемом</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочное с брусничным джемом</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-6">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_6.jpg" width="267" height="267" alt="товар6">
+				<h3 class="product-hit-price">
 				410 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочно-черничное с цельными ягодами черники</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочно-черничное с цельными ягодами черники</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>	
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-7">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_7.jpg" width="267" height="267" alt="товар7">
+				<h3 class="product-hit-price">
 				315 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочно-лимонное с карамельной присыпкой</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочно-лимонное с карамельной присыпкой</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-8">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_8.jpg" width="267" height="267" alt="товар8">
+				<h3 class="product-hit-price">
 				320 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочное с шоколадной стружкой</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочное с шоколадной стружкой</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>	
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-9">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_9.jpg" width="267" height="267" alt="товар9">
+				<h3 class="product-hit-price">
 				440 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочно-ванильное с кусочками шоколада</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочно-ванильное с кусочками шоколада</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-10">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_10.jpg" width="267" height="267" alt="товар10">
+				<h3 class="product-hit-price">
 				435 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочноe с ментоловым сиропом</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочноe с ментоловым сиропом</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>	
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-11">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_11.jpg" width="267" height="267" alt="товар11">
+				<h3 class="product-hit-price">
 				355 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочное с кусочками черного шоколада</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочное с кусочками черного шоколада</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
 		 	</div>
 		</div>
-		<div class="catalog-product">
-    		<div class="catalog-product-img catalog-product-12">
-				<!--<img src="img/catalog/product_1.jpg" width="267" height="267" alt="товар1">-->
-				<h3 class="catalog-product-price">
+		<div class="product-hit-cart">
+    		<div class="product-hit-detail">
+				<img class="product-hit-image" src="img/catalog/product_12.jpg" width="267" height="267" alt="товар12">
+				<h3 class="product-hit-price">
 				420 Р/кг
 				</h3>
 			</div>
-			<p class="catalog-product-text">
-				<a class="catalog-product-href">Сливочное с мятным сиропом</a>
+			<p class="product-hit-text">
+				<a class="product-hit-cart-link">Сливочное с мятным сиропом</a>
 	 		</p>
 	 		<div class="button-wrapper">
 		 		<button class="button button-hit">Быстрый просмотр</button>
@@ -472,35 +467,49 @@ type="text/javascript"></script>
 	  	</p>
   	</section>	
 </footer>
-<!--<h2>Корзина</h2>-->
-<!--
-<div class="modal modal-basket">  
-  <div class="cart cart-margin-top" style="">
-	  <a href="" class="modal-basket-close">
-     	<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
-     </a>
-	  <img class="modal-basket-img" src="img/catalog/product_1.jpg" width="33" height="33" alt="Товар1">
-	  <p class="modal-basket-name">Пломбир с апельсиновым джемом</p > 
-	  <p class="cart-weight">1,5 кг х <span class="cart-price">200 руб.</span></p > 
-	  <p>300 руб.</p > 
-  </div>
-  <div class="cart">
-	 <a href="" class="modal-basket-close">
-     	<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
-     </a>	 
-	  <img class="modal-basket-img" src="img/catalog/product_3.jpg" width="33" height="33" alt="Товар2">
-	  <p class="modal-basket-name">Клубничный пломбир с присыпкой из белого шоколада</p>
-	  <p class="cart-weight">1,5 кг х <span class="cart-price">300 руб.</span></p>
-	  <p> 450 руб.</p>	    
-  </div>
-  <hr class="modal-basket-border">
-  <div class="cart-total"> 
-  	  <p>Итого: 750 руб.</p>
-  </div>
-  <form class="form-cart" action="index.html" method="post">
-    <button class="button button-cart" type="submit">Оформить заказ</button>
-  </form>
-</div>
--->
+<section class="modal modal-seach" id="modal-seach">
+	<form class="basic-form seach-form" action="index.html" method="get">
+	    <input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
+	</form>
+</section>
+<section class="modal modal-personal" id="modal-personal">
+  	<form class="basic-form login-form" action="index.html" method="post">
+		<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
+		<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
+		<div class="login-form-container">
+			<button class="button login-form-button" type="submit">Войти</button>
+				<a class="password-restore link-login-form" href="#">Забыли пароль?</a>
+				<a class="new-user link-login-form" href="#">Новая регистрация</a>
+		</div>
+  	</form>
+</section>
+<h2 class="visually-hidden">Корзина</h2>
+<div class="modal modal-basket" id="modal-basket">  
+	<div class="cart cart-margin-top">
+		<a href="" class="modal-basket-close">
+			<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
+		</a>
+		<img class="modal-basket-img" src="img/catalog/product_1.jpg" width="33" height="33" alt="Товар1">
+		<p class="modal-basket-name">Пломбир с апельсиновым джемом</p > 
+		<p class="cart-weight">1,5 кг х <span class="cart-price">200 руб.</span></p > 
+		<p>300 руб.</p > 
+	</div>
+	<div class="cart">
+		<a href="" class="modal-basket-close">
+			<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">
+		</a>	 
+		<img class="modal-basket-img" src="img/catalog/product_3.jpg" width="33" height="33" alt="Товар2">
+		<p class="modal-basket-name">Клубничный пломбир с присыпкой из белого шоколада</p>
+		<p class="cart-weight">1,5 кг х <span class="cart-price">300 руб.</span></p>
+		<p> 450 руб.</p>	    
+	</div>
+	<hr class="modal-basket-border">
+	<div class="cart-total"> 
+		<p>Итого: 750 руб.</p>
+	</div>
+	<form class="form-cart" action="index.html" method="post">
+		<button class="button button-cart" type="submit">Оформить заказ</button>
+	</form>
+</div>     
 </body>
 </html>
