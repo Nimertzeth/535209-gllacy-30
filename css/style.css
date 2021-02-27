@@ -90,6 +90,9 @@ ul {margin: 0;
 	padding: 0;
   list-style: none;
 }
+button{
+	border: none;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -140,51 +143,24 @@ ul {margin: 0;
 	position: relative;
 }
 .modal-seach-button{
-	background-color: var(--link-border);
 	border-radius: 20px; 
 	width: 32px;
 	height: 32px;
-	display: grid;
-	grid-template-columns: max-content 1fr;
-	align-content:center;
-}
-.img-seach-hover{
-	display: none;
+	background: url(../img/icons/seach_ico.png) center no-repeat, var(--link-border);
 }
 .modal-seach-button:hover, 
 .modal-seach-button:focus{
-	background: var(--basic-white);
-}
-.modal-seach-button:hover .img-seach-hover, 
-.modal-seach-button:focus .img-seach-hover{
-	display: block;
-}
-.modal-seach-button:hover .img-seach-normal, 
-.modal-seach-button:focus .img-seach-normal{
-	display: none;
-}
-
-.img-login-hover{
-	display: none;
+	background: url(../img/icons/seach_ico_active.png) center no-repeat, var(--basic-white);
 }
 .modal-login{
 	cursor: pointer;
 }
-.modal-login-button:hover .img-login-hover, 
-.modal-login-button:focus .img-login-hover{
-	display: block;
-}
-.modal-login-button:hover .img-login-normal, 
-.modal-login-button:focus .img-login-normal{
-	display: none;
-}
-.modal-login-button:hover p, 
-.modal-login-button:focus p{
-	color: var(--basic-black);
-}
 .modal-login-button:hover, 
 .modal-login-button:focus{
-	background: var(--basic-white);
+	background: url(../img/icons/login-ico-hover.png) 22% 50% no-repeat, var(--basic-white);
+	color:var(--basic-black);
+	text-align: right;
+	padding-right: 16.5px;
 }
 .modal-personal{
 	top:-10px;
@@ -192,12 +168,6 @@ ul {margin: 0;
 	position: absolute;
 	display: none;
 	z-index: 111;
-}
-.modal-seach-button img{
-	margin-left: 8px;
-	margin-right: 8px;
-	align-self:center;
-	display: grid;
 }
 .catalog-navigation{
 	position: relative;
@@ -246,24 +216,20 @@ ul {margin: 0;
 	padding-right: 13px;
 }
 .modal-login-button{
-	background: var(--link-border);
 	border-radius: 20px; 
 	width: 92px;
 	height: 32px;
-	display: grid;
-	grid-gap: 8px;
-	grid-template-columns: max-content 1fr;
-	align-content:center;
-}
-.modal-login-button img{
-	margin-left: 16px;
-	align-self:center;
-	
+	background: url(../img/icons/login-ico.png) 22% 50% no-repeat, var(--link-border);
+	color:var(--basic-white);
+	text-align: right;
+	padding-right: 16.5px;
 }
 .modal-login-button p{
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
+	padding: 0;
+	margin:0;
 }
 .modal-basket-button{
 	background: var(--link-border);
@@ -272,9 +238,13 @@ ul {margin: 0;
 	border-radius: 20px; 
 	height: 32px;
 	display: grid;
-	grid-gap: 8px;
+	grid-gap: 0 8px;
 	grid-template-columns: max-content 1fr;
 	align-content:center;
+	color: var(--basic-white);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
 }
 .modal-basket-button img{
 	align-self:center;
@@ -296,18 +266,14 @@ ul {margin: 0;
 	align-content:center;
 	background: var(--basic-white);
 	position: relative;
-}
-.modal-basket-button-full p{
 	color: var(--basic-black);
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
-	
 }
 .modal-basket-button-full img{
 	align-self:center;
 }
-
 .catalog-navigation-list{
 	position: absolute;
 	display: none;
@@ -1030,17 +996,25 @@ align-items: center;
 	font-size: 14px;
 	line-height: 16px;
 	display: flex;
-	flex-direction: row;
-	
+	flex-direction: row;	
+}
+.breadcrumbs li{
+	position: relative;
 }
 .breadcrumbs a{
-	margin-right:10px;
+	margin-right:22px;
 	border-bottom: 1px solid var(--link-border);
 	display: flex;
 	flex-direction: row;
 }
-.breadcrumbs li:nth-child(2n){
-	margin-right: 10px;
+.breadcrumbs li:not(:first-child):before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: url(../img/icons/breadcrumbs-separator.svg) no-repeat;
+	position: absolute;
+	left:-14px;	
+	bottom: 1px;
 }
 .breadcrumbs li:last-child a{
 	border-bottom:0;
@@ -1156,7 +1130,6 @@ align-items: center;
 	top:6px;
 }
 .filter-select:hover {
-	background: var(--basic-white);
 	color: var(--basic-black);
 }
 .filter-select:hover:after{
@@ -1387,6 +1360,7 @@ align-items: center;
 }
 .pagination-list .active-page:hover{
 	background: var(--basic-white);
+
 }
 .pagination-list-2{
 	color: var(--link-border);
@@ -1396,6 +1370,7 @@ align-items: center;
   	align-items:center;
   	justify-content: center;
   	margin-right: 12px;
+  	opacity: 0.2;
 }
 .pagination-list-2 a{
 	color: var(--link-border);
@@ -1415,10 +1390,16 @@ align-items: center;
 .pagination-list a{
 	color: var(--basic-white); 
 } 
+
 .basic-form input[type="email"],
 .basic-form input[type="text"],
 .basic-form input[type="password"]{
 	color:var(--basic-black);
+}
+.input-fat-list:disabled + .label-fat-list,
+.input-filler-list:disabled + .label-filler-list
+{
+ opacity: 0.4;
 }
 /*Форма поиска*/
 .modal-seach{

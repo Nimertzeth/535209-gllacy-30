@@ -54,18 +54,14 @@
 	      </li>
 	    </ul>
 	    <div class="nav-button-container">
-		    <a onclick="seachForm()" class="modal-login modal-seach-button">
-		    	<div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
-		    	<div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
-		    </a>
-		    <a onclick="loginForm()"  class="modal-login modal-login-button">
-		    	<img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
-		    	<img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
+		    <button onclick="seachForm()" class="modal-login modal-seach-button">
+		    </button>			
+		    <button onclick="loginForm()"  class="modal-login modal-login-button">
 		    	<p>Вход</p>
-		    </a>
-	        <a onclick="basketForm()" class="modal-login  modal-basket-button-full">
+		    </button>	
+	        <button onclick="basketForm()" class="modal-login  modal-basket-button-full">
 	          <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
-	        </a>
+	        </button>
     </nav>
     <div class="nav-info-container">    
         <p class="nav-info-text">с 10 до 20, ежедневно</p>
@@ -75,10 +71,8 @@
 </header>
 <main class="container catalog-container"> 
 	<ul class="breadcrumbs">
-    	<li><a href="index.html">Главная</a></li>
-		<li>&#187; </li>	
-    	<li><a href="catalog.html">Каталог</a></li>
-    	<li>&#187; </li>	
+    	<li><a href="index.html">Главная</a></li>		
+    	<li><a href="catalog.html">Каталог</a></li>  	
     	<li><a href="#">Сливочное</a></li>
   	</ul>
 	<h1 class="main-title">Сливочное мороженое</h1>
@@ -351,7 +345,7 @@
     <div class="pagination">
     	<ul class="pagination-main-list">
 	      <li class="pagination-list-2">
-	        <a class="active-page">&#8249;</a>
+	        <a class=""><img src="img/icons/page-left.png"></a>
 	      </li>
 	      <li class="pagination-list">
 	        <a class="active-page">1</a>
@@ -369,7 +363,7 @@
 	        <a href="#">5</a>
 	      </li>
 	      <li class="pagination-list">
-	        <a href="#">&#8250;</a>
+	        <a href="#"><img src="img/icons/page-right.png"></a>
 	      </li>
     	</ul>
     </div>
