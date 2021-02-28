@@ -10,8 +10,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="css/normalize.css" rel="stylesheet">
-   <link href="css/style.css" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <link href="css/style.min.css" rel="stylesheet">
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
 	type="text/javascript">
 	</script>
@@ -54,12 +53,12 @@
 	      </li>
 	    </ul>
 	    <div class="nav-button-container">
-		    <button onclick="seachForm()" class="modal-login modal-seach-button">
+		    <button onmouseover="seachForm()" onmouseout="closeForm()" class="modal-login modal-seach-button">
 		    </button>			
-		    <button onclick="loginForm()"  class="modal-login modal-login-button">
+		    <button onmouseover="loginForm()" onmouseout="closeForm()" class="modal-login modal-login-button">
 		    	<p>Вход</p>
 		    </button>	
-	        <button onclick="basketForm()" class="modal-login  modal-basket-button-full">
+	        <button onmouseover="basketForm()" onmouseout="closeForm()" class="modal-login  modal-basket-button-full">
 	          <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
 	        </button>
     </nav>
@@ -420,12 +419,14 @@
 	  	</p>
   	</section>	
 </footer>
-<section class="modal modal-seach" id="modal-seach">
+<h2 class="visually-hidden">Форма поиска</h2>
+<section onmouseover="seachForm()" onmouseout="closeForm()" class="modal modal-seach" id="modal-seach">
 	<form class="basic-form seach-form" action="https://echo.htmlacademy.ru/" method="get">
 	    <input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
 	</form>
 </section>
-<section class="modal modal-personal" id="modal-personal">
+<h2 class="visually-hidden">Личный кабинет</h2>
+<section  onmouseover="loginForm()" onmouseout="closeForm()" class="modal modal-personal" id="modal-personal">
   	<form class="basic-form login-form" action="https://echo.htmlacademy.ru/" method="post">
 		<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
 		<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
@@ -437,7 +438,7 @@
   	</form>
 </section>
 <h2 class="visually-hidden">Корзина</h2>
-<div class="modal modal-basket" id="modal-basket">  
+<div onmouseover="basketForm()" onmouseout="closeForm()" class="modal modal-basket" id="modal-basket">  
 	<div class="cart cart-margin-top">
 		<a href="" class="modal-basket-close">
 			<img src="img/icons/close_ico.png" width="11" height="11" alt="Кнопка_закрыть">

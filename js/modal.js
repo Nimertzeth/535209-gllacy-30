@@ -1,47 +1,28 @@
-				function basketForm(){
- 		var x = document.getElementById("modal-basket");
- 		x.style.display = "grid"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-basket-button-full').length || $(e.target).closest('.modal-basket').length ) {
-         	return;
-    	}
-    $('.modal-basket').fadeOut();
-});	
-
-				function loginForm(){
- 		var x = document.getElementById("modal-personal");
- 		x.style.display = "block"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-login-button').length || $(e.target).closest('.modal-personal').length ) {
-         	return;
-    	}
-    $('.modal-personal').fadeOut();
-});	
-
-				function seachForm(){
- 		var x = document.getElementById("modal-seach");
- 		x.style.display = "block"; 
-		}
-		$(document).click( function(e){
-    		if ( $(e.target).closest('.modal-seach-button').length || $(e.target).closest('.modal-seach').length ) {
-         	return;
-    	}
-    $('.modal-seach').fadeOut();
-});	
-
-    function feedbackForm(){
-        var x = document.getElementById("feedback-form");
-        x.style.display = "block"; 
-        }
-    function closeForm(){
-        var x = document.getElementById("feedback-form");
-        x.style.display = "none"; 
-        }   
-    $(document).click( function(e){
-        if ( $(e.target).closest('.button-contacts').length || $(e.target).closest('.feedback-form').length ) {
-        return;
-        }
-    $('.feedback-form').fadeOut();
-}); 
+function basketForm(){
+ 	var modalBasket = document.getElementById("modal-basket");
+ 	modalBasket.style.display = "grid"; 
+	}
+function loginForm(){
+ 	var modalPersonal = document.getElementById("modal-personal");
+ 	modalPersonal.style.display = "block"; 
+	}
+function seachForm(){
+ 	var modalSeach = document.getElementById("modal-seach");
+ 	modalSeach.style.display = "block"; 
+	}
+function feedbackForm(){
+    var feedbackForm = document.getElementById("feedback-form");
+    feedbackForm.style.display = "block"; 
+    }
+function closeFeedback(){
+    var feedbackForm = document.getElementById("feedback-form");
+    feedbackForm.style.display = "none"; 
+    }   
+function closeForm(){
+    var modalSeach = document.getElementById("modal-seach");
+        modalSeach.style.display = "none";  
+    var modalPersonal = document.getElementById("modal-personal");
+        modalPersonal.style.display = "none"; 
+    var modalBasket = document.getElementById("modal-basket");
+        modalBasket.style.display = "none";             
+    }    
