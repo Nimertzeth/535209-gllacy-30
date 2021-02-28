@@ -44,7 +44,9 @@
   --select-list-element: rgba(30, 144, 255, 1);
   --basic-text-shadow: rgba(49, 50, 53, 0.5);
 }
-
+.page {
+  height: 100%;
+}
 /*Появилась браузерная обводка кнопок, пришлось гуглить, нашел такое решение*/
 /*Начало*/
 a:active, a:focus { outline: none; }
@@ -61,12 +63,15 @@ fieldset{
 }
 /*Конец*/
 body {
-	transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   --background-1:var(--basic-backgound-green);	
   --background-2:var(--basic-backgound-blue);	
   --background-3:var(--basic-backgound-brown);	
   --slide-background: var(--basic-backgound-green);
   min-width: 1200px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
   margin: 0;
   padding: 0;
   font-family: Tahoma, sans-serif;
@@ -369,6 +374,7 @@ button{
 .container-404{
 	margin:0 auto;
 	width: 1146px;
+	min-height: 100%;
 }
 .title-404{
 	margin-bottom: 50px;
@@ -550,6 +556,7 @@ button{
 	display: flex;
 	justify-content: center;
 }
+
 .product-hit-cart .button-hit{
 	visibility: hidden;
 	padding: 12px 16px;
@@ -777,12 +784,12 @@ button{
 	width: 1144px;
 	margin: 0 auto;
 	margin-top:18px;
-	margin-bottom: 25px;
+	padding-bottom: 25px;
 	height: 60px;
 	display: grid;
 	grid-gap: 234px;
 	grid-template-columns: max-content 1fr max-content;
-align-items: center;
+	align-items: center;
 }
 .main-footer-catalog{
 	border-top:1px solid var(--link-border);
@@ -933,11 +940,12 @@ align-items: center;
 	color: var(--basic-black);
 }
 .basic-form input:hover{
-	border: 2px solid var(--form-border);
-
+	border: 1px solid var(--form-border);
+	box-shadow: 0 0 0 1px var(--form-border);
 }
 .basic-form input:focus{
-	border: 2px solid var(--form-focus-border);
+	border: 1px solid var(--form-focus-border);
+	box-shadow: 0 0 0 1px var(--form-focus-border);
 	font-weight: bold;
 }
 .feedback-form textarea:hover{
@@ -1320,19 +1328,17 @@ align-items: center;
 .catalog{
 	margin-top: 40px;
 	width: 1146px;
-	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 /*Пагинация*/
 .pagination{
 	margin-top: 80px;
-	margin-bottom: 30px;
+	margin-bottom: 12px;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-white); 
-
 }
 .pagination-main-list{
 	display: flex;
@@ -1360,7 +1366,6 @@ align-items: center;
 }
 .pagination-list .active-page:hover{
 	background: var(--basic-white);
-
 }
 .pagination-list-2{
 	color: var(--link-border);

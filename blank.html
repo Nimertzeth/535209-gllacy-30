@@ -22,7 +22,7 @@ type="text/javascript"></script>
         <img src="img/logo/logo_gllacy.svg" width="154" height="64" alt="Логотип «Глейси»">
       </a>
       <ul class="site-navigation">
-        <li class="catalog-navigation catalog-navigation-hover">
+        <li class="catalog-navigation catalog-navigation-hover catalog-navigation-onpage">
           <a href="catalog.html">Каталог</a>
               <ul class="catalog-navigation-list">
             <li class="catalog-navigation-list-container catalog-navigation-list-new">
@@ -33,7 +33,7 @@ type="text/javascript"></script>
               <a class="catalog-navigation-list-link" href="catalog.html">Сливочное</a>
           </li>
             <li class="catalog-navigation-list-container">
-              <a class="catalog-navigation-list-link" href="">Щербеты</a>
+              <a class="catalog-navigation-list-link catalog-navigation-list-focus" href="catalog.html">Щербеты</a>
             </li>
             <li class="catalog-navigation-list-container">
               <a class="catalog-navigation-list-link" href="catalog.html">Фруктовый лёд</a>
@@ -51,19 +51,14 @@ type="text/javascript"></script>
         </li>
       </ul>
       <div class="nav-button-container">
-        <a class="modal-login modal-seach-button" href="#">
-          <div class="img-seach-normal"><img src="img/icons/seach_ico.png" width="16" height="16" alt="Поиск"></div>
-          <div class="img-seach-hover"><img src="img/icons/seach_ico_active.png" width="16" height="16" alt="Поиск"></div>
-        </a>
-        <a class="modal-login modal-login-button" href="#">
-          <img class="img-login-normal" src="img/icons/login-ico.png" width="20" height="19" alt="Вход">
-          <img class="img-login-hover" src="img/icons/login-ico-hover.png" width="20" height="19" alt="Вход">
+        <button onclick="seachForm()" class="modal-login modal-seach-button">
+        </button>     
+        <button onclick="loginForm()"  class="modal-login modal-login-button">
           <p>Вход</p>
-        </a>
-        <a class="modal-login modal-basket-button" href="#">
-          <img src="img/icons/cart_empty_ico.png" width="21" height="20" alt="Корзина"><p>Пусто</p>
-        </a>
-    </div>     
+        </button> 
+          <button onclick="basketForm()" class="modal-login  modal-basket-button-full">
+            <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
+          </button>
     </nav>
     <div class="nav-info-container">    
         <p class="nav-info-text">с 10 до 20, ежедневно</p>
