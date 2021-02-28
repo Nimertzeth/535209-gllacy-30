@@ -1114,6 +1114,7 @@ button{
 	border-radius: 50%;
 	background: var(--basic-backgound-blue);
 	z-index: 11;
+	cursor: pointer;
 }
 .filter-range-toggle:hover{
 	border: 10px solid var(--basic-white);
