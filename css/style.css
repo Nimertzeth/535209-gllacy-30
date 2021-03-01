@@ -23,9 +23,6 @@
   --hover-radio-color:rgba(255, 255, 255, 0.4);
   --basic-back-rasp: #dc143c;
   --basic-back-choc: #4d260b;
-  --basic-back-pattern:#fde910;
-  --basic-back-straw:#fffafa;
-  --basic-back-mail:#fde910;
   --cart-weight: #000000;
   --cart-price: #ABABAB;
   --focus-back: #EDEDED;
@@ -105,9 +102,6 @@ a {
 img {
   	max-width: 100%;
   	height: auto;
-}
-ul {
-  	
 }
 button{
   	border: none;
