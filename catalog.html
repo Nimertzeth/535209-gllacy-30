@@ -11,10 +11,6 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="css/normalize.css" rel="stylesheet">
    <link href="css/style.min.css" rel="stylesheet">
-   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-	type="text/javascript">
-	</script>
-	<script src="js/modal.js"></script>
 </head>
 <body class="page-body">
 <header class="main-header">
@@ -27,20 +23,19 @@
 	      <li class="catalog-navigation catalog-navigation-hover catalog-navigation-onpage">
 	      	<a href="catalog.html">Каталог</a>
 	      	    <ul class="catalog-navigation-list">
-	    			<li class="catalog-navigation-list-container catalog-navigation-list-new">
+	    			<li class="catalog-navigation-list-new">
 	    				<a class="catalog-navigation-list-link-main" href="catalog.html"><b>Новинки</b></a>
 	    			</li>
-	    			<hr class="catalog-navigation-list-border">
-	    			<li class="catalog-navigation-list-container">
+	    			<li>
 	   	 				<a class="catalog-navigation-list-link" href="catalog.html">Сливочное</a>
 					</li>
-	    			<li class="catalog-navigation-list-container">
+	    			<li>
 	    				<a class="catalog-navigation-list-link catalog-navigation-list-focus" href="catalog.html">Щербеты</a>
 	    			</li>
-	    			<li class="catalog-navigation-list-container">
+	    			<li>
 	    				<a class="catalog-navigation-list-link" href="catalog.html">Фруктовый лёд</a>
 	    			</li>
-	    			<li class="catalog-navigation-list-container">
+	    			<li>
 	    				<a class="catalog-navigation-list-link" href="catalog.html">Мелорин</a>
 	    			</li>
 	  			</ul>
@@ -53,14 +48,15 @@
 	      </li>
 	    </ul>
 	    <div class="nav-button-container">
-		    <button onmouseover="seachForm()" onmouseout="closeForm()" class="modal-login modal-seach-button">
-		    </button>			
-		    <button onmouseover="loginForm()" onmouseout="closeForm()" class="modal-login modal-login-button">
-		    	<p>Вход</p>
-		    </button>	
-	        <button onmouseover="basketForm()" onmouseout="closeForm()" class="modal-login  modal-basket-button-full">
+	        <button onmouseover="searchForm()" onmouseout="closeForm()" class="modal-login modal-search-button">
+	        </button>     
+	        <button onmouseover="loginForm()" onmouseout="closeForm()" class="modal-login modal-login-button">
+	          Вход
+	        </button>   
+	        <a onmouseover="basketForm()" onmouseout="closeForm()" class="modal-login  modal-basket-button-full">
 	          <img src="img/icons/cart_full_ico.png" width="21" height="20" alt="Корзина"><p>2 товара</p>
-	        </button>
+	        </a>
+	    </div>
     </nav>
     <div class="nav-info-container">    
         <p class="nav-info-text">с 10 до 20, ежедневно</p>
@@ -82,7 +78,7 @@
 	        	<legend class="filter-title">Сортировка:</legend>
 	        	<div class="filter-container">
 			    	<div class="filter-select">
-			    		<ul>
+			    		<ul class="filter-select-main-list">
 			    			<li class="filter-select-main">по популярности
 			    				<ul class="filter-select-list">
 			    					<li class="filter-select-list-element"><p>по популярности</p></li>
@@ -112,13 +108,13 @@
 			        <ul class="filter-product-fat-list">
 			        	<li>
 			        		<input class="input-fat-list" type="radio" name="product-fat" value="percent_0" id="percent_0">
-			        		<label id="lfl" class="label-fat-list" for="percent_0"></label>
+			        		<label class="label-fat-list" for="percent_0"></label>
 			       
 			        	</li>
 			        	<li class="product-fat-list-items"><p>0%</p></li>
 			        	<li>	           		
 		            		<input class="input-fat-list" type="radio" name="product-fat" value="percent_below_10" id="percent_below_10" checked>
-		            		<label id="lfl" class="label-fat-list" for="percent_below_10"></label> 
+		            		<label class="label-fat-list" for="percent_below_10"></label> 
 		            	</li>
 		            	<li class="product-fat-list-items"><p>до 10%</p></li>
 			        	<li>	
@@ -145,7 +141,7 @@
 			        	</li>
 			        	<li class="filler-list-items">шоколад</li>
 			        	<li>
-			        		<input class="input-filler-list"type="checkbox" name="sugar" id="filler_sugar"  checked>
+			        		<input class="input-filler-list" type="checkbox" name="sugar" id="filler_sugar"  checked>
 		            		<label class="label-filler-list" for="filler_sugar"></label> 
 			        	</li>
 			        	<li class="filler-list-items">сахарные присыпки</li>
@@ -344,7 +340,7 @@
     <div class="pagination">
     	<ul class="pagination-main-list">
 	      <li class="pagination-list-2">
-	        <a class=""><img src="img/icons/page-left.png"></a>
+	        <a class=""><img src="img/icons/page-left.png" alt="стрелка влево" width="9" height="15"></a>
 	      </li>
 	      <li class="pagination-list">
 	        <a class="active-page">1</a>
@@ -362,7 +358,7 @@
 	        <a href="#">5</a>
 	      </li>
 	      <li class="pagination-list">
-	        <a href="#"><img src="img/icons/page-right.png"></a>
+	        <a href="#"><img src="img/icons/page-right.png" alt="стрелка вправо" width="9" height="15"></a>
 	      </li>
     	</ul>
     </div>
@@ -372,21 +368,25 @@
 	<h2  class="visually-hidden">Наши соцсети</h2>
 	    <ul class="footer-social-list">
 	    	<li>
+	    		<p class="visually-hidden">Фейсбук</p>
 	    		<a class="social-button" href="#">
 	    			<img src="img/icons/FB.svg" width="32" height="32" alt="Фейсбук">
 	        	</a>
 	      	</li>
 	      	<li>
+	      		<p class="visually-hidden">Вконтакте</p>
 	      		<a class="social-button" href="#">
 	      			<img src="img/icons/VK.svg" width="32" height="32" alt="Вконтакте">
 	        	</a>
 	      	</li>
 	      	<li>
+	      		<p class="visually-hidden">Инстаграм</p>
 	      		<a class="social-button" href="#">
 	      			<img src="img/icons/IG.svg" width="32" height="32" alt="Инстаграм">
 	        	</a>
 	      	</li>
 	      	<li>
+	      		<p class="visually-hidden">Твитер</p>
 	      		<a class="social-button" href="#">
 	      			<img src="img/icons/TW.svg" width="32" height="32" alt="Твитер">
 	        	</a>
@@ -396,7 +396,7 @@
     <section class="footer-info footer-catalog-border-margin">
 	<h2  class="visually-hidden">О нас</h2>
 	  	<ul class="footer-info-list">
-	    	<li class="dilers">
+	    	<li class="dealer">
 	        	<a href="blank.html">Для поставщиков</a>
 	      	</li>
 	      	<li>
@@ -415,21 +415,24 @@
 	    	<img src="img/logo/logo_academy.svg" width="108" height="39" alt="Лого_разработчика">
 	    </a>
 	  	<p class="text-developer">
-	  		Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
+	  		Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
 	  	</p>
   	</section>	
 </footer>
 <h2 class="visually-hidden">Форма поиска</h2>
-<section onmouseover="seachForm()" onmouseout="closeForm()" class="modal modal-seach" id="modal-seach">
-	<form class="basic-form seach-form" action="https://echo.htmlacademy.ru/" method="get">
-	    <input class="search_product" id="search_product" type="text" name="search_product" placeholder="Крем-брюле">
+<section onmouseover="searchForm()" onmouseout="closeForm()" class="modal modal-search" id="modal-search">
+	<form class="basic-form search-form" action="https://echo.htmlacademy.ru/" method="get">
+	    <input class="search-product" id="search-product" type="text" name="search_product" placeholder="Крем-брюле">
+	    <label class="label-search-product" for="search-product"></label> 
 	</form>
 </section>
 <h2 class="visually-hidden">Личный кабинет</h2>
 <section  onmouseover="loginForm()" onmouseout="closeForm()" class="modal modal-personal" id="modal-personal">
   	<form class="basic-form login-form" action="https://echo.htmlacademy.ru/" method="post">
-		<input class="login-form-login" id="entrance_login" type="email" name="login" placeholder="email@example.com">
-		<input class="login-form-password" id="entrance_password" type="password" name="password" placeholder="......">
+		<input class="login-form-login" id="entrance-login" type="email" name="login" placeholder="email@example.com">
+		<label class="entrance-login" for="entrance-login"></label> 
+		<input class="login-form-password" id="entrance-password" type="password" name="password" placeholder="......">
+		<label class="entrance-password" for="entrance-password"></label> 
 		<div class="login-form-container">
 			<button class="button login-form-button" type="submit">Войти</button>
 				<a class="password-restore link-login-form" href="#">Забыли пароль?</a>
@@ -464,6 +467,10 @@
 	<form class="form-cart" action="https://echo.htmlacademy.ru/" method="post">
 		<button class="button button-cart" type="submit">Оформить заказ</button>
 	</form>
-</div>     
+</div>   
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+type="text/javascript">
+</script>
+<script src="js/script.min.js"></script>  
 </body>
 </html>
